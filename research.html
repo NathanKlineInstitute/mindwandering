@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research — Conte Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .proj-section { padding: 60px 0; border-bottom: 1px solid rgba(255,255,255,.05); }
+    .proj-section:last-of-type { border-bottom: none; }
+    .proj-layout { display: grid; grid-template-columns: 280px 1fr; gap: 44px; align-items: start; }
+    .proj-sidebar { background: var(--navy-card); border: 1px solid rgba(26,200,174,.15); border-radius: var(--radius-lg); padding: 26px; position: sticky; top: 112px; }
+    .proj-sidebar .proj-num { font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+    .proj-sidebar h3 { font-size: .98rem; margin-bottom: 14px; }
+    .proj-sidebar .pi-row { display: flex; align-items: center; gap: 9px; margin-bottom: 10px; }
+    .sidebar-label { font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim); margin: 14px 0 6px; }
+    .proj-body h2 { font-size: 1.45rem; margin-bottom: 14px; }
+    .proj-body > p { color: var(--text-dim); font-size: .93rem; line-height: 1.8; margin-bottom: 14px; }
+    .highlight-box { background: rgba(26,200,174,.06); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 16px 0; font-size: .9rem; color: var(--text-dim); font-style: italic; line-height: 1.7; }
+    .highlight-box strong { color: var(--teal); font-style: normal; }
+    @media (max-width: 860px) { .proj-layout { grid-template-columns: 1fr; } .proj-sidebar { position: static; } }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🧠</div><div>Conte Center <span>NKI</span></div></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li>
+      <li><a href="team.html">Team</a></li><li><a href="publications.html">Publications</a></li>
+    </ul>
+    <div class="audience-toggle">
+      <button class="toggle-btn pub" data-mode="public">👤 General Public</button>
+      <button class="toggle-btn sci" data-mode="scientist">🔬 Scientist</button>
+    </div>
+    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mode-banner" id="modeBanner"></div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="tag">Research Program</div>
+    <div class="pub-only"><h1>What we study — and <em style="font-style:normal;color:var(--teal)">why it matters</em></h1><p>Plain-language descriptions of our four research projects and two support cores. Switch to Scientist mode for abstracts, specific aims, and technical methods.</p></div>
+    <div class="sci-only"><h1>Research Projects &amp; <em style="font-style:normal;color:var(--teal)">Support Cores</em></h1><p>Full abstracts, specific aims, methods, and institutional details for all components of the Conte Center. Switch to Public mode for accessible summaries.</p></div>
+  </div>
+</div>
+
+<!-- ── Overview strip ── -->
+<div style="background:var(--navy-mid);padding:48px 0;border-bottom:1px solid rgba(26,200,174,.08);">
+  <div class="container">
+    <div class="pub-only fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+      <div>
+        <div class="mode-label pub">For Everyone</div>
+        <h2 style="font-size:1.4rem;margin-bottom:12px;">The core question: why do slow brain rhythms matter?</h2>
+        <p style="color:var(--text-dim);line-height:1.8;">We study the very slow waves in brain activity — cycles of seconds to minutes — that quietly direct when you focus, when you daydream, and how effectively your brain processes the world. Our research spans human brain scanning, recordings from the brains of epilepsy patients (with their consent), studies in monkeys, and computer modeling.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="background:var(--navy-card);border:1px solid rgba(26,200,174,.15);border-radius:12px;padding:18px;">
+          <div style="font-size:.72rem;font-weight:700;color:var(--pub-accent);letter-spacing:.08em;margin-bottom:8px;">THE BIG IDEA</div>
+          <p style="font-size:.88rem;color:var(--text-dim);line-height:1.75;">Slow brain rhythms are not background noise — they are a fundamental organizing principle of brain function that shapes cognition, emotion, and behavior moment to moment.</p>
+        </div>
+        <div style="background:var(--navy-card);border:1px solid rgba(26,200,174,.15);border-radius:12px;padding:18px;">
+          <div style="font-size:.72rem;font-weight:700;color:var(--amber);letter-spacing:.08em;margin-bottom:8px;">THE GOAL</div>
+          <p style="font-size:.88rem;color:var(--text-dim);line-height:1.75;">To understand slow rhythms well enough to develop new treatments for neuropsychiatric disorders where these rhythms go wrong — including ADHD, depression, and schizophrenia.</p>
+        </div>
+      </div>
+    </div>
+    <div class="sci-only fade-in" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;">
+      <div class="hyp-box"><div class="hyp-label">Overarching Hypothesis</div><p>Slow fluctuations of neural activity &lt;1 Hz (down to ≥0.01 Hz) are critical determinants of affect, cognition, and behavior.</p></div>
+      <div class="hyp-box"><div class="hyp-label">Linking Hypothesis 1</div><p>Local slow neural fluctuations link to large-scale SBNFs that significantly impact attention, RT, and autonomic measures (HRV, pupil).</p></div>
+      <div class="hyp-box"><div class="hyp-label">Linking Hypothesis 2</div><p>Hierarchical PAC — the phase of low-frequency activity controlling amplitude of higher frequencies — integrates brain function across timescales.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── PROJECT 1 ── -->
+<div id="project1"><div class="proj-section">
+  <div class="container"><div class="proj-layout fade-in">
+    <div class="proj-sidebar">
+      <div class="proj-num">Project 1 · P977</div>
+      <h3>Macroscale Physiology &amp; Cognitive Correlates</h3>
+      <div class="pi-row"><div class="proj-avatar">MM</div><div><div class="proj-name" style="font-size:.88rem;font-weight:600;color:var(--white);">Michael Milham, PhD, MD</div><div class="proj-org" style="font-size:.78rem;color:var(--text-dim);">Child Mind Institute / NKI</div></div></div>
+      <div class="sidebar-label">Methods</div>
+      <div><span class="method-chip">fMRI</span><span class="method-chip">EEG</span><span class="method-chip">Pupillometry</span><span class="method-chip">ECG / EDA</span><span class="method-chip">Respiration</span><span class="method-chip">Experience Sampling</span><span class="method-chip">Pharmacology</span></div>
+      <div class="sidebar-label">Species / Site</div>
+      <p style="font-size:.8rem;color:var(--text-dim);">Humans · NKI, Orangeburg NY</p>
+    </div>
+    <div class="proj-body">
+      <div class="pub-only">
+        <div class="mode-label pub">Plain language</div>
+        <h2>Mapping the full picture of slow brain rhythms in people</h2>
+        <div class="highlight-box"><strong>What we're asking:</strong> How do slow brain rhythms relate to what you're thinking, how you're feeling, and how well you perform? We track everything — brain activity, body signals, and inner thoughts — simultaneously.</div>
+        <p>In this project, healthy adults visit our lab for brain scans and brainwave recordings while doing everything from complex cognitive tasks to simply resting with their eyes closed. Every few minutes, we pause and ask them: "What were you just thinking about?" — capturing the actual contents of their internal thoughts.</p>
+        <p>At the same time, we measure heart rate, breathing, pupil size, skin response, and muscle activity. This lets us build a rich, simultaneous picture of how slow brain rhythms relate to all these signals — and to the contents of ongoing thought.</p>
+        <p>We also use a controlled drug study (with appropriate safeguards) to investigate whether increasing arousal — temporarily — changes how slow rhythms operate, which would tell us whether arousal is a cause or consequence of those rhythms.</p>
+      </div>
+      <div class="sci-only">
+        <div class="mode-label sci">Scientific abstract</div>
+        <h2>Macroscale physiology and functional correlates of slow network fluctuations</h2>
+        <div class="highlight-box"><strong>Overarching goal:</strong> Broadly characterize the relationship of slow fluctuations across multiple simultaneous measures of brain activity, physiology, behavior, and cognition to understand their role in orchestrating externally vs. internally directed attention.</div>
+        <p>Slow fluctuations in behavioral, cognitive, and neural states are an omnipresent feature of the brain across species and are aberrant in multiple disorders of the nervous system. SBNFs critically organize behavior across extended timescales: as drifts in arousal over minutes, as well as the ability to switch between attending externally versus turning internally to plan future actions and dwell on recent experiences.</p>
+        <p>This project performs a deep characterization of SBNFs by collecting extensive multimodal neural and physiological recordings (simultaneous fMRI, EEG, EDA, pupillometry, respiration, ECG, EMG) in healthy human participants across tasks ranging from unstructured rest to highly structured attention-demanding paradigms. Experience sampling assesses the contents of ongoing cognition throughout.</p>
+        <h3 style="margin-top:20px;margin-bottom:10px;font-size:1rem;">Specific Aims</h3>
+        <ul class="aims-list">
+          <li><span class="aim-tag">Aim 1</span> Deep characterization of SBNFs through simultaneous multimodal neural and physiological recordings across an extended array of tasks, mapping slow fluctuations to externally-oriented task performance and the contents of internal cognition.</li>
+          <li><span class="aim-tag">Aim 2a</span> Directly assess contributions of SBNFs to internally-oriented cognition (learning, goal planning tasks) and measure neural/behavioral markers of continued internal processing and trade-offs between internally- vs. externally-oriented modes.</li>
+          <li><span class="aim-tag">Aim 2b</span> Assess causal contributions of cognitive control and arousal to SBNFs, using task demands and double-blind pharmacological manipulation (methylphenidate) to dissociate their distinct contributions.</li>
+        </ul>
+      </div>
+    </div>
+  </div></div>
+</div></div>
+
+<!-- ── PROJECT 2 ── -->
+<div id="project2"><div class="proj-section" style="background:rgba(10,28,53,.4);">
+  <div class="container"><div class="proj-layout fade-in">
+    <div class="proj-sidebar">
+      <div class="proj-num">Project 2 · P842</div>
+      <h3>Meso-Microscale Physiology via iEEG</h3>
+      <div class="pi-row"><div class="proj-avatar">RK</div><div><div class="proj-name" style="font-size:.88rem;font-weight:600;color:var(--white);">Robert Knight, PhD</div><div class="proj-org" style="font-size:.78rem;color:var(--text-dim);">UC Berkeley / Feinstein Institutes</div></div></div>
+      <div class="sidebar-label">Methods</div>
+      <div><span class="method-chip">iEEG / ECoG</span><span class="method-chip">BHA (70–200 Hz)</span><span class="method-chip">SUA</span><span class="method-chip">PAC / Phase-Slope</span><span class="method-chip">Granger Causality</span><span class="method-chip">EOMs / Pupillometry</span><span class="method-chip">Experience Sampling</span></div>
+      <div class="sidebar-label">Species / Sites</div>
+      <p style="font-size:.8rem;color:var(--text-dim);">Humans (surgical epilepsy) · UC Berkeley, UCSF, UC Irvine, UC Davis, UPitt, WashU</p>
+    </div>
+    <div class="proj-body">
+      <div class="pub-only">
+        <div class="mode-label pub">Plain language</div>
+        <h2>A window inside the human brain — with consent from epilepsy patients</h2>
+        <div class="highlight-box"><strong>What we're asking:</strong> When your mind wanders away from the task at hand, what is actually happening inside your brain's circuitry? Epilepsy patients who already have brain electrodes placed for medical reasons give us a unique chance to find out.</div>
+        <p>Some patients with epilepsy have electrodes temporarily placed directly on their brain's surface to locate seizure foci. With their consent, these electrodes let us record brain activity at a level of detail impossible from outside the skull — like hearing individual instruments instead of a whole orchestra through a wall.</p>
+        <p>We run three types of sessions, from most structured to most natural: focused attention tasks, passive movie watching (where minds naturally drift), and multi-day continuous recording paired with experience sampling probes. This lets us see exactly what the brain does as it transitions between externally-focused and internally-focused states.</p>
+      </div>
+      <div class="sci-only">
+        <div class="mode-label sci">Scientific abstract</div>
+        <h2>Meso-microscale physiology and dynamics of slow network fluctuations</h2>
+        <div class="highlight-box"><strong>Core approach:</strong> Use iEEG to address the role of SBNFs and local cortical activation in neural circuits supporting external attention and attention to internal thoughts — focusing on DMN and FPCN interactions across three experimental conditions of increasing naturalism.</div>
+        <p>Neural networks orchestrate behavior across multiple timescales and are disordered in numerous developmental, neurological, and psychiatric disorders. This project uses intracranial EEG to examine differential interactions between the default mode network (DMN) and the fronto-parietal attention networks (FPCN) supporting externally vs. internally directed attention. Local neural activation is measured with broadband high-frequency activity (BHA; 70–200 Hz) and single-unit activity (SUA). Inter-areal network interactions are assessed using phase slope index, single-trial HFA onsets, Granger causality, directional PAC, representational similarity analysis, and mutual information.</p>
+        <h3 style="margin-top:20px;margin-bottom:10px;font-size:1rem;">Specific Aims</h3>
+        <ul class="aims-list">
+          <li><span class="aim-tag">Aim 1</span> Structured tasks with attention switching between external and internal states — focus on anterior insula and posterior cingulate in network switching; intermodal auditory-visual paradigm probes attention and lapses.</li>
+          <li><span class="aim-tag">Aim 2</span> Naturalistic movie-viewing paradigm — more ecological conditions entailing passive viewing with EOMs, alpha oscillations, BHA, and pupillometry indexing drifts from active attention to internal thought. Post-movie recognition tests confirm attention lapses.</li>
+          <li><span class="aim-tag">Aim 3</span> Multi-day experience sampling coupled with continuous iEEG recording — subjects queried about their internal mental state (on-task, off-task, mind-wandering) classified as freely moving thoughts, deliberately constrained thoughts, or automatically constrained thoughts.</li>
+        </ul>
+      </div>
+    </div>
+  </div></div>
+</div></div>
+
+<!-- ── PROJECT 3 ── -->
+<div id="project3"><div class="proj-section">
+  <div class="container"><div class="proj-layout fade-in">
+    <div class="proj-sidebar">
+      <div class="proj-num">Project 3 · P361</div>
+      <h3>Multiscale Physiology &amp; Causal Mechanisms</h3>
+      <div class="pi-row"><div class="proj-avatar">CS</div><div><div class="proj-name" style="font-size:.88rem;font-weight:600;color:var(--white);">Charles Schroeder, PhD</div><div class="proj-org" style="font-size:.78rem;color:var(--text-dim);">NKI / Icahn School of Medicine</div></div></div>
+      <div class="sidebar-label">Methods</div>
+      <div><span class="method-chip">Laminar Multielectrodes</span><span class="method-chip">Brush Arrays</span><span class="method-chip">LFP / MUA / CSD</span><span class="method-chip">Scalp EEG / fMRI</span><span class="method-chip">Methylphenidate</span><span class="method-chip">Vagus Nerve Stim</span><span class="method-chip">Chemogenetics (DREADDs)</span></div>
+      <div class="sidebar-label">Species / Site</div>
+      <p style="font-size:.8rem;color:var(--text-dim);">Non-human primates (macaques) · NKI / Icahn / Mt. Sinai</p>
+    </div>
+    <div class="proj-body">
+      <div class="pub-only">
+        <div class="mode-label pub">Plain language</div>
+        <h2>Finding the cellular machinery behind slow brain rhythms</h2>
+        <div class="highlight-box"><strong>What we're asking:</strong> Which brain circuits actually <em>generate</em> slow rhythms — and can we change them? Brain scans can tell us where slow rhythms occur, but not how they arise from individual cells and circuits. We use animal studies to answer that question.</div>
+        <p>We work with macaque monkeys, whose brains are organized very similarly to human brains. Using tiny electrode arrays, we can record from individual brain cells and local circuits simultaneously, at the same time as performing the equivalent of a brain scan.</p>
+        <p>Crucially, this project goes beyond description: we use targeted drugs, controlled electrical stimulation, and a technique called chemogenetics (which uses engineered proteins to temporarily switch off specific pathways) to test whether particular circuits are truly the cause of slow rhythms — not just correlated with them. This causal understanding is essential for developing treatments.</p>
+      </div>
+      <div class="sci-only">
+        <div class="mode-label sci">Scientific abstract</div>
+        <h2>Multiscale physiology and causal mechanisms of slow network fluctuations</h2>
+        <div class="highlight-box"><strong>Core goal:</strong> Advance the physiological interpretation of macroscale findings using meso- and microscale measures in humans and NHPs — defining SBNFs across distributed brain areas and identifying the cellular and circuit mechanisms that generate and modulate them.</div>
+        <p>NHP work provides simultaneous scalp EEG/fMRI, behavioral-cognitive, and autonomic data under three common tasks and conditions: intermodal attention, movie watching, and rest. Brush and laminar array recordings define microscopic cell circuits and physiological processes (Aim 1). A second aim identifies processes and structures triggering and modulating SBNF dynamics via pharmacology and neuromodulation (Aim 2).</p>
+        <h3 style="margin-top:20px;margin-bottom:10px;font-size:1rem;">Specific Aims</h3>
+        <ul class="aims-list">
+          <li><span class="aim-tag">Aim 1</span> Link macroscale measures of P1 meso- and microscale physiology of SBNFs — defining SBNFs across distributed brain areas including the interoceptive system (AIC) and thalamocortical auditory system, testing hypotheses about opposing unit/LFP activation levels in task-positive vs. task-negative networks.</li>
+          <li><span class="aim-tag">Aim 2</span> Define processes and structures triggering/modulating SBNFs: (a) pharmacologically increase arousal via methylphenidate as direct link to P1; (b) vagus nerve stimulation (impacts cholinergic/dopaminergic systems and interoceptive network); (c) reversible chemogenetic (DREADD) inactivation of AIC projections to ACC and nucleus basalis to test causal roles of these pathways.</li>
+        </ul>
+      </div>
+    </div>
+  </div></div>
+</div></div>
+
+<!-- ── PROJECT 4 ── -->
+<div id="project4"><div class="proj-section" style="background:rgba(10,28,53,.4);">
+  <div class="container"><div class="proj-layout fade-in">
+    <div class="proj-sidebar">
+      <div class="proj-num">Project 4 · P930</div>
+      <h3>Integrated Network &amp; Cell-Circuit Models</h3>
+      <div class="pi-row"><div class="proj-avatar">SJ</div><div><div class="proj-name" style="font-size:.88rem;font-weight:600;color:var(--white);">Stephanie Jones, PhD</div><div class="proj-org" style="font-size:.78rem;color:var(--text-dim);">Brown University / Yale</div></div></div>
+      <div class="sidebar-label">Methods</div>
+      <div><span class="method-chip">Dynamical Systems</span><span class="method-chip">Biophysical Circuits</span><span class="method-chip">Large-Scale Networks</span><span class="method-chip">EEG Forward Models</span><span class="method-chip">CAP Analysis</span><span class="method-chip">Multi-Scale Integration</span></div>
+      <div class="sidebar-label">Species / Site</div>
+      <p style="font-size:.8rem;color:var(--text-dim);">Computational (all species) · Brown University / Yale</p>
+    </div>
+    <div class="proj-body">
+      <div class="pub-only">
+        <div class="mode-label pub">Plain language</div>
+        <h2>Building a computer model of the brain's slow rhythms</h2>
+        <div class="highlight-box"><strong>What we're asking:</strong> Can we build a virtual brain accurate enough to reproduce the slow rhythms we observe — and use it to test theories too complex to test in experiments alone?</div>
+        <p>Our computational team builds two types of models that work together. The first is a large-scale network model — like a map of the whole brain — that captures how slow rhythm activity propagates across brain regions. The second is a biophysically detailed circuit model — zoomed in to a small patch of cortex — that simulates what individual neurons are actually doing.</p>
+        <p>These models don't just describe what we observe — they allow us to test mechanistic theories. If we change a synaptic parameter or remove a specific cell type in the model, does the slow rhythm disappear? If so, that becomes a testable prediction for the animal experiments in Project 3. This back-and-forth between models and experiments accelerates discovery.</p>
+      </div>
+      <div class="sci-only">
+        <div class="mode-label sci">Scientific abstract</div>
+        <h2>Integrated brain network and cell-circuit models of slow network fluctuations</h2>
+        <div class="highlight-box"><strong>Core goal:</strong> Develop iterative interactions between modeling and empirical studies to integrate knowledge across data scales — synthesizing multi-modal recordings from Projects 1–3 into multi-scale mechanistic computational models of cortical dynamics and SBNFs.</div>
+        <p>Project 4 develops novel computational models of neural circuit dynamics and applies them to fit features of multi-modal neural recordings in Projects 1–3. Models are used to test hypotheses and gain insight into dynamical and biophysical mechanisms underlying SBNFs and their impact on local circuit processing of sensory information.</p>
+        <h3 style="margin-top:20px;margin-bottom:10px;font-size:1rem;">Specific Aims</h3>
+        <ul class="aims-list">
+          <li><span class="aim-tag">Aim 1</span> Fit a dynamical systems model to capture spectral state dynamics in cortical regions as measured by LFP, EEG, iEEG. Test hypothesis that slow (~0.1–1 Hz) fluctuations in spectral state can be captured through bistability — transitions induced by noise and adaptation. Large-scale network model simulates brain-wide phenomena (fMRI functional connectivity, CAP states).</li>
+          <li><span class="aim-tag">Aim 2</span> Develop biophysically detailed models of neocortical circuits with laminar resolution — designed to bring macroscale human iEEG/EEG to microscale phenomena (cell spiking, LFP/CSD). Test how cell type-specific properties and thalamocortical connectivity must be combined to replicate multiscale dynamics. Systematically explore PAC mechanisms underlying SBNFs.</li>
+          <li><span class="aim-tag">Aim 3 (Exploratory)</span> Develop a multi-scale model embedding biophysically detailed microcircuit models from Aim 2 as distinct nodes in a large-scale network in which other nodes are simulated as phenomenological dynamical systems from Aim 1.</li>
+        </ul>
+      </div>
+    </div>
+  </div></div>
+</div></div>
+
+<!-- ── SUPPORT CORES ── -->
+<section class="section" style="background:var(--navy-mid);" id="cores">
+  <div class="container">
+    <div class="section-header center fade-in">
+      <div class="tag">Support Cores</div>
+      <div class="divider divider-center"></div>
+      <div class="pub-only"><h2>Making sure our data is integrated and shared openly</h2></div>
+      <div class="sci-only"><h2>Research Support Cores B &amp; C</h2></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+      <div class="card fade-in">
+        <div style="font-size:.68rem;font-weight:800;color:var(--teal);letter-spacing:.1em;margin-bottom:8px;">CORE B · RS-001 (P926)</div>
+        <h3>Multimodal Data Analysis &amp; Integration</h3>
+        <div style="display:flex;align-items:center;gap:9px;margin:12px 0;"><div class="proj-avatar" style="width:34px;height:34px;font-size:.75rem;">TX</div><div><div class="proj-name" style="font-size:.85rem;font-weight:600;color:var(--white);">Ting Xu, PhD</div><div class="proj-org" style="font-size:.75rem;color:var(--text-dim);">Child Mind Institute · Vanderbilt</div></div></div>
+        <div class="pub-only"><p style="font-size:.88rem;color:var(--text-dim);line-height:1.7;">Our data comes in many forms — brain scans from humans, electrical recordings from monkeys, and more. Core B builds the mathematical tools that put all this data into a common framework so scientists can meaningfully compare findings across studies and species.</p></div>
+        <div class="sci-only"><p style="font-size:.86rem;color:var(--text-dim);line-height:1.7;">Develops multimodal alignment frameworks establishing a common space for analysis across modalities, individuals, and species (Projects 1–3). Aims: (1) functional alignment framework for cross-modal comparison; (2) refine cross-species alignment using functional data from P1–2 and macaque data from P3; (3) state-space framework for decomposing brain dynamics into spatiotemporal states from joint EEG, fMRI, and physiological signals.</p></div>
+        <div style="margin-top:12px;"><span class="method-chip">Functional Alignment</span><span class="method-chip">Cross-Species Mapping</span><span class="method-chip">State-Space Models</span></div>
+      </div>
+      <div class="card fade-in">
+        <div style="font-size:.68rem;font-weight:800;color:var(--teal);letter-spacing:.1em;margin-bottom:8px;">CORE C · RS-002 (P952)</div>
+        <h3>Data Aggregation, Standardization &amp; Sharing</h3>
+        <div style="display:flex;align-items:center;gap:9px;margin:12px 0;"><div class="proj-avatar" style="width:34px;height:34px;font-size:.75rem;">AF</div><div><div class="proj-name" style="font-size:.85rem;font-weight:600;color:var(--white);">Alexandre Franco, PhD</div><div class="proj-org" style="font-size:.75rem;color:var(--text-dim);">Nathan Kline Institute</div></div></div>
+        <div class="pub-only"><p style="font-size:.88rem;color:var(--text-dim);line-height:1.7;">Every dataset we collect is carefully quality-checked, standardized, and made openly available to the scientific community worldwide — following FAIR principles so that any researcher can access and build on our work, accelerating discovery globally.</p></div>
+        <div class="sci-only"><p style="font-size:.86rem;color:var(--text-dim);line-height:1.7;">DASS-C is the component through which overall management and sharing of experimental and processed data is conducted. Follows FAIR (Findable, Accessible, Interoperable, Reusable) principles. Four aims: (1) guide and support community data standards development; (2) provide data management platform for aggregation and sharing; (3) perform QC and minimal preprocessing; (4) facilitate dataset dissemination and reproducibility of analyses.</p></div>
+        <div style="margin-top:12px;"><span class="method-chip">FAIR Data</span><span class="method-chip">Quality Control</span><span class="method-chip">Open Science</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="nav-logo" style="margin-bottom:0;"><div class="nav-logo-icon">🧠</div><div>Conte Center <span style="color:var(--teal)">NKI</span></div></div><p>Funded by NIH P50 MH109429.</p></div>
+      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="team.html">Team</a></li><li><a href="publications.html">Publications</a></li></ul></div>
+      <div class="footer-col"><h4>Projects</h4><ul><li><a href="#project1">Project 1</a></li><li><a href="#project2">Project 2</a></li><li><a href="#project3">Project 3</a></li><li><a href="#project4">Project 4</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:charles.schroeder@nki.rfmh.org">Charles Schroeder</a></li><li><a href="mailto:Alexandre.Franco@nki.rfmh.org">Alexandre Franco</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2024 Conte Center · NKI</span><a href="mailto:charles.schroeder@nki.rfmh.org">Contact</a></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

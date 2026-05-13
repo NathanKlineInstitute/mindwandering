@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publications &amp; Resources — Conte Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .legend-bar { display:flex;flex-wrap:wrap;gap:12px;background:var(--navy-mid);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:12px 16px;margin-bottom:24px;font-size:.77rem; }
+    .legend-item { display:flex;align-items:center;gap:6px;color:var(--text-dim); }
+    .legend-dot  { width:9px;height:9px;border-radius:50%;flex-shrink:0; }
+    .pubcount-badge { display:inline-flex;align-items:center;gap:6px;background:rgba(26,200,174,.1);border:1px solid rgba(26,200,174,.22);border-radius:6px;padding:4px 12px;font-size:.8rem;color:var(--teal);font-weight:600; }
+    .data-card { background:linear-gradient(135deg,var(--navy-card),rgba(26,200,174,.04));border:1px solid rgba(26,200,174,.2);border-radius:var(--radius-lg);padding:26px;transition:all var(--transition); }
+    .data-card:hover { border-color:rgba(26,200,174,.45);transform:translateY(-4px); }
+    .data-card h3 { font-size:1rem;margin-bottom:8px; }
+    .data-card p { color:var(--text-dim);font-size:.87rem;line-height:1.7;margin-bottom:14px; }
+    .event-item { display:flex;gap:18px;background:var(--navy-card);border:1px solid rgba(26,200,174,.12);border-radius:12px;padding:18px 20px;transition:all var(--transition); }
+    .event-item:hover { border-color:rgba(26,200,174,.3); }
+    .event-date { flex-shrink:0;width:54px;background:rgba(26,200,174,.1);border:1px solid rgba(26,200,174,.2);border-radius:8px;padding:7px 4px;text-align:center; }
+    .event-month { font-size:.6rem;font-weight:700;text-transform:uppercase;color:var(--teal); }
+    .event-day { font-size:1.3rem;font-weight:800;color:var(--white);line-height:1; }
+    .event-year { font-size:.6rem;color:var(--text-dim); }
+    .event-body h3 { font-size:.92rem;margin-bottom:4px; }
+    .event-body p { font-size:.83rem;color:var(--text-dim);line-height:1.6; }
+    .event-type { font-size:.68rem;font-weight:700;color:var(--teal);margin-bottom:5px;letter-spacing:.06em;text-transform:uppercase; }
+    .participate-card { background:linear-gradient(135deg,var(--navy-card),rgba(255,107,107,.04));border:1px solid rgba(255,107,107,.18);border-radius:var(--radius-lg);padding:28px;transition:all var(--transition); }
+    .participate-card:hover { border-color:rgba(255,107,107,.4);transform:translateY(-4px); }
+  </style>
+</head>
+<body>
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🧠</div><div>Conte Center <span>NKI</span></div></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li>
+      <li><a href="team.html">Team</a></li><li><a href="publications.html">Publications</a></li>
+    </ul>
+    <div class="audience-toggle">
+      <button class="toggle-btn pub" data-mode="public">👤 General Public</button>
+      <button class="toggle-btn sci" data-mode="scientist">🔬 Scientist</button>
+    </div>
+    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mode-banner" id="modeBanner"></div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="tag">Science &amp; Resources</div>
+    <div class="pub-only"><h1>Our Research, <em style="font-style:normal;color:var(--teal)">News &amp; Ways to Get Involved</em></h1><p>Plain-language summaries of key publications, plus how to participate in our studies, the latest news, and upcoming events.</p></div>
+    <div class="sci-only"><h1>Publications, Open Data <em style="font-style:normal;color:var(--teal)">&amp; Resources</em></h1><p>Full publication record of Charles E. Schroeder and the Conte Center team, open datasets, news, and events.</p></div>
+  </div>
+</div>
+
+<!-- Stats strip -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="stat-num" data-count="36">0</div><div class="stat-label">Publications Listed</div></div>
+      <div class="stat-item"><div class="stat-num" data-count="66">0</div><div class="stat-label">Prior Conte Period Pubs</div></div>
+      <div class="stat-item"><div class="stat-num">2000</div><div class="stat-label">Record Spans From</div></div>
+      <div class="stat-item"><div class="stat-num">2022</div><div class="stat-label">Latest Captured</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ PUBLICATIONS ══════════ -->
+<section class="section" id="publications">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="tag">Publications</div><div class="divider"></div>
+      <div class="pub-only"><h2>Key discoveries — in plain language</h2><p>Selected publications with brief plain-language summaries. Switch to Scientist mode for full citation details and topic filters.</p></div>
+      <div class="sci-only">
+        <h2>Publications — Charles E. Schroeder</h2>
+        <p style="margin-bottom:14px;">Verified from NIH biosketch and Conte Center Progress Report (June 2022). <strong style="color:var(--teal)">Teal border</strong> = first/corresponding author.</p>
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+          <span class="pubcount-badge" id="pubCount">36 publications</span>
+          <a href="http://www.ncbi.nlm.nih.gov/sites/myncbi/charles.schroeder.1/bibliography/40687225/public/?sort=date&direction=ascending" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:.8rem;padding:6px 16px;">Full NCBI record →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scientist: filters -->
+    <div class="sci-only">
+      <div class="legend-bar">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--teal)"></div>Slow Fluctuations</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ffc947"></div>Active Sensing</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#a78bfa"></div>Attention &amp; Oscillations</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#7dd3fc"></div>Field Potentials</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#34d399"></div>Brain Networks</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ff6b6b"></div>Clinical</div>
+      </div>
+      <div class="filter-tabs" data-group="year">
+        <button class="tab-btn active" data-filter="all">All Years</button>
+        <button class="tab-btn" data-filter="y2022">2022</button>
+        <button class="tab-btn" data-filter="y2021">2021</button>
+        <button class="tab-btn" data-filter="y2020">2020</button>
+        <button class="tab-btn" data-filter="y2019">2019</button>
+        <button class="tab-btn" data-filter="y2018">2018</button>
+        <button class="tab-btn" data-filter="y2017">2017</button>
+        <button class="tab-btn" data-filter="earlier">2016 &amp; Earlier</button>
+      </div>
+      <div class="filter-tabs" data-group="topic">
+        <button class="tab-btn active" data-filter="all">All Topics</button>
+        <button class="tab-btn" data-filter="sbnf">Slow Fluctuations</button>
+        <button class="tab-btn" data-filter="sensing">Active Sensing</button>
+        <button class="tab-btn" data-filter="attn">Attention</button>
+        <button class="tab-btn" data-filter="lfp">Field Potentials</button>
+        <button class="tab-btn" data-filter="networks">Networks</button>
+        <button class="tab-btn" data-filter="clinical">Clinical</button>
+      </div>
+    </div>
+
+    <!-- PUBLIC: curated highlights with plain summaries -->
+    <div class="pub-only" style="display:flex;flex-direction:column;gap:10px;">
+
+      <div class="pub-item fade-in">
+        <div class="pub-meta"><span class="pub-year">2022</span></div>
+        <div class="pub-title">Saccade-related modulation of oscillatory activity in primary auditory cortex</div>
+        <div class="pub-authors">Barczak A, O'Connell MN, McGinnis T, Mackin K, <strong>Schroeder CE</strong>, Lakatos P</div>
+        <div class="pub-journal">bioRxiv (preprint)</div>
+        <div class="pub-plain">💡 Every time your eyes flick to a new location, the auditory part of your brain also changes its activity — suggesting eye movements help orchestrate how the brain processes sound, not just vision.</div>
+      </div>
+
+      <div class="pub-item fade-in">
+        <div class="pub-meta"><span class="pub-year">2020</span></div>
+        <div class="pub-title">Cross-species functional alignment reveals evolutionary hierarchy within the connectome</div>
+        <div class="pub-authors">Xu T, … <strong>Schroeder CE</strong>, … Milham MP</div>
+        <div class="pub-journal">NeuroImage (2020)</div>
+        <div class="pub-plain">💡 The brain regions most similar between humans and monkeys are the basic sensory areas; the regions most different are the ones involved in complex thought. This evolutionary gradient tells us which human brain features are uniquely ours.</div>
+      </div>
+
+      <div class="pub-item fade-in">
+        <div class="pub-meta"><span class="pub-year">2019</span></div>
+        <div class="pub-title">Dynamic Modulation of Cortical Excitability during Visual Active Sensing</div>
+        <div class="pub-authors">Barczak A, Haegens S, Ross DA, McGinnis T, Lakatos P, <strong>Schroeder CE</strong></div>
+        <div class="pub-journal">Cell Reports (2019)</div>
+        <div class="pub-plain">💡 When an animal actively looks at something (versus passively receiving the same image), the brain processes visual information very differently. Active looking resets brain oscillations and amplifies responses — demonstrating that vision is an active act, not a passive one.</div>
+      </div>
+
+      <div class="pub-item fade-in">
+        <div class="pub-meta"><span class="pub-year">2014</span></div>
+        <div class="pub-title">Motor contributions to the temporal precision of auditory attention</div>
+        <div class="pub-authors">Morillon B, <strong>Schroeder CE</strong>, Wyart V</div>
+        <div class="pub-journal">Nature Communications (2014)</div>
+        <div class="pub-plain">💡 Your body's motor system helps you listen more precisely — movements like nodding your head or tapping your foot help your brain lock onto the rhythm of speech and music. Hearing is partly a physical act.</div>
+      </div>
+
+      <div class="pub-item fade-in">
+        <div class="pub-meta"><span class="pub-year">2013</span></div>
+        <div class="pub-title">Mechanisms underlying selective neuronal tracking of attended speech at a "cocktail party"</div>
+        <div class="pub-authors">Zion Golumbic EM, Ding N, Bickel S, Lakatos P, … <strong>Schroeder CE</strong></div>
+        <div class="pub-journal">Neuron (2013)</div>
+        <div class="pub-plain">💡 When you focus on one voice in a noisy room, specific neurons in your brain physically lock onto the rhythm of that voice — and ignore others. This explains how attention works at a cellular level.</div>
+      </div>
+
+      <div class="pub-item fade-in">
+        <div class="pub-meta"><span class="pub-year">2009</span></div>
+        <div class="pub-title">Low-frequency neuronal oscillations as instruments of sensory selection</div>
+        <div class="pub-authors"><strong>Schroeder CE</strong>, Lakatos P</div>
+        <div class="pub-journal">Trends in Neurosciences (2009)</div>
+        <div class="pub-plain">💡 A landmark review proposing that slow brain rhythms aren't background noise — they are fundamental tools the brain uses to selectively attend to the right information at the right time.</div>
+      </div>
+
+      <div class="pub-item fade-in">
+        <div class="pub-meta"><span class="pub-year">2008</span></div>
+        <div class="pub-title">Entrainment of neuronal oscillations as a mechanism of attentional selection</div>
+        <div class="pub-authors">Lakatos P, Karmos G, Mehta AD, Ulbert I, <strong>Schroeder CE</strong></div>
+        <div class="pub-journal">Science (2008)</div>
+        <div class="pub-plain">💡 Published in Science — one of the world's top journals — this paper showed that when you pay attention to a rhythmic stimulus, your brain's oscillations literally synchronize with it, boosting processing efficiency. Attention works by tuning the brain like a radio dial.</div>
+      </div>
+
+      <div style="text-align:center;margin-top:20px;" class="fade-in">
+        <p style="color:var(--text-dim);font-size:.85rem;margin-bottom:14px;">Switch to Scientist mode to see all 36 publications with full citations and filters.</p>
+        <button onclick="setMode('scientist')" class="btn btn-outline" style="font-size:.88rem;">Switch to Scientist mode →</button>
+      </div>
+    </div>
+
+    <!-- SCIENTIST: full pub list -->
+    <div class="sci-only">
+      <div style="display:flex;flex-direction:column;">
+
+        <div class="pub-item lead-author" data-year="y2022" data-topic="sbnf">
+          <div class="pub-meta"><span class="pub-year">2022</span><span class="pub-cat" style="border-color:rgba(26,200,174,.3);color:var(--teal);">Slow Fluct.</span><span class="pub-cat">bioRxiv</span></div>
+          <div class="pub-title">Saccade-related modulation of oscillatory activity in primary auditory cortex</div>
+          <div class="pub-authors">Barczak A, O'Connell MN, McGinnis T, Mackin K, <strong>Schroeder CE</strong>, Lakatos P</div>
+          <div class="pub-journal">bioRxiv (2022) — preprint</div>
+        </div>
+        <div class="pub-item" data-year="y2022" data-topic="networks">
+          <div class="pub-meta"><span class="pub-year">2022</span><span class="pub-cat" style="border-color:#34d399;color:#34d399;">Networks</span></div>
+          <div class="pub-title">Anatomical and functional connectivity support the existence of a salience network node within the caudal ventrolateral prefrontal cortex</div>
+          <div class="pub-authors">Trambaiolli LR, Peng X, Lehman JF, Linn G, Russ BE, <strong>Schroeder CE</strong>, Liu H, Haber SN</div>
+          <div class="pub-journal">eLife 11 (2022)</div>
+        </div>
+        <div class="pub-item" data-year="y2021" data-topic="sbnf">
+          <div class="pub-meta"><span class="pub-year">2021</span><span class="pub-cat" style="border-color:rgba(26,200,174,.3);color:var(--teal);">Slow Fluct.</span></div>
+          <div class="pub-title">Ongoing neural oscillations influence behavior and sensory representations by suppressing neuronal excitability</div>
+          <div class="pub-authors">Iemi L, Gwilliams L, Samaha J, Auksztulewicz R, Cycowicz YM, King J-R, Nikulin VV, Thesen T, Doyle W, Devinsky O, <strong>Schroeder CE</strong>, Melloni L, Haegens S</div>
+          <div class="pub-journal">NeuroImage 247:118746 (2021)</div>
+        </div>
+        <div class="pub-item" data-year="y2021" data-topic="attn">
+          <div class="pub-meta"><span class="pub-year">2021</span><span class="pub-cat" style="border-color:#a78bfa;color:#a78bfa;">Attention</span></div>
+          <div class="pub-title">Differential contributions of synaptic and intrinsic inhibitory currents to speech segmentation via flexible phase-locking in neural oscillators</div>
+          <div class="pub-authors">Pittman-Polletta BR, Wang Y, Stanley DA, <strong>Schroeder CE</strong>, Whittington MA, Kopell NJ</div>
+          <div class="pub-journal">PLoS Computational Biology 17:e1008783 (2021)</div>
+        </div>
+        <div class="pub-item" data-year="y2020" data-topic="sbnf">
+          <div class="pub-meta"><span class="pub-year">2020</span><span class="pub-cat" style="border-color:rgba(26,200,174,.3);color:var(--teal);">Slow Fluct.</span></div>
+          <div class="pub-title">Oscillatory Bursting as a Mechanism for Temporal Coupling and Information Coding</div>
+          <div class="pub-authors">Tal I, Neymotin S, Bickel S, Lakatos P, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">Frontiers in Computational Neuroscience 14:82 (2020)</div>
+        </div>
+        <div class="pub-item" data-year="y2020" data-topic="sensing">
+          <div class="pub-meta"><span class="pub-year">2020</span><span class="pub-cat" style="border-color:#ffc947;color:#ffc947;">Active Sensing</span></div>
+          <div class="pub-title">The Role of Motor and Environmental Visual Rhythms in Structuring Auditory Cortical Excitability</div>
+          <div class="pub-authors">O'Connell MN, Barczak A, McGinnis T, Mackin K, Mowery T, <strong>Schroeder CE</strong>, Lakatos P</div>
+          <div class="pub-journal">iScience 23:101374 (2020)</div>
+        </div>
+        <div class="pub-item" data-year="y2020" data-topic="attn">
+          <div class="pub-meta"><span class="pub-year">2020</span><span class="pub-cat" style="border-color:#a78bfa;color:#a78bfa;">Attention</span></div>
+          <div class="pub-title">Spatial Attention and Temporal Expectation Exert Differential Effects on Visual and Auditory Discrimination</div>
+          <div class="pub-authors">Wilsch A, Mercier MR, Obleser J, <strong>Schroeder CE</strong>, Haegens S</div>
+          <div class="pub-journal">J Cognitive Neuroscience 32:1562–1576 (2020)</div>
+        </div>
+        <div class="pub-item" data-year="y2020" data-topic="networks">
+          <div class="pub-meta"><span class="pub-year">2020</span><span class="pub-cat" style="border-color:#34d399;color:#34d399;">Networks</span></div>
+          <div class="pub-title">Cross-species functional alignment reveals evolutionary hierarchy within the connectome</div>
+          <div class="pub-authors">Xu T, Nenning K-H, Schwartz E, Hong S-J, Vogelstein JT, Goulas A, Fair DA, <strong>Schroeder CE</strong>, Margulies DS, Smallwood J, Milham MP, Langs G</div>
+          <div class="pub-journal">NeuroImage 223:117346 (2020)</div>
+        </div>
+        <div class="pub-item lead-author" data-year="y2019" data-topic="sensing">
+          <div class="pub-meta"><span class="pub-year">2019</span><span class="pub-cat" style="border-color:#ffc947;color:#ffc947;">Active Sensing</span></div>
+          <div class="pub-title">The Role of Neuronal Oscillations in Visual Active Sensing</div>
+          <div class="pub-authors">Leszczynski M, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">Frontiers in Integrative Neuroscience 13:32 (2019)</div>
+        </div>
+        <div class="pub-item" data-year="y2019" data-topic="sensing">
+          <div class="pub-meta"><span class="pub-year">2019</span><span class="pub-cat" style="border-color:#ffc947;color:#ffc947;">Active Sensing</span></div>
+          <div class="pub-title">Dynamic Modulation of Cortical Excitability during Visual Active Sensing</div>
+          <div class="pub-authors">Barczak A, Haegens S, Ross DA, McGinnis T, Lakatos P, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">Cell Reports 27:3447–3459.e3 (2019)</div>
+        </div>
+        <div class="pub-item" data-year="y2019" data-topic="clinical">
+          <div class="pub-meta"><span class="pub-year">2019</span><span class="pub-cat" style="border-color:#ff6b6b;color:#ff6b6b;">Clinical</span></div>
+          <div class="pub-title">The Thalamocortical Circuit of Auditory Mismatch Negativity</div>
+          <div class="pub-authors">Lakatos P, O'Connell MN, Barczak A, McGinnis T, Neymotin S, <strong>Schroeder CE</strong>, Smiley JF, Javitt DC</div>
+          <div class="pub-journal">Biological Psychiatry 87:770–780 (2019)</div>
+        </div>
+        <div class="pub-item" data-year="y2019" data-topic="networks">
+          <div class="pub-meta"><span class="pub-year">2019</span><span class="pub-cat" style="border-color:#34d399;color:#34d399;">Networks</span></div>
+          <div class="pub-title">Interindividual Variability of Functional Connectivity in Awake and Anesthetized Rhesus Macaque Monkeys</div>
+          <div class="pub-authors">Xu T, Sturgeon D, Ramirez JSB, Froudist-Walsh S, Margulies DS, <strong>Schroeder CE</strong>, Fair DA, Milham MP</div>
+          <div class="pub-journal">Biological Psychiatry CNNI 4:543–553 (2019)</div>
+        </div>
+        <div class="pub-item" data-year="y2019" data-topic="lfp">
+          <div class="pub-meta"><span class="pub-year">2019</span><span class="pub-cat" style="border-color:#7dd3fc;color:#7dd3fc;">Field Potentials</span></div>
+          <div class="pub-title">Electric field dynamics in the brain during multi-electrode transcranial electric stimulation</div>
+          <div class="pub-authors">Alekseichuk I, Falchier AY, Linn G, Xu T, Milham MP, <strong>Schroeder CE</strong>, Opitz A</div>
+          <div class="pub-journal">Nature Communications 10:2573 (2019)</div>
+        </div>
+        <div class="pub-item lead-author" data-year="y2018" data-topic="lfp">
+          <div class="pub-meta"><span class="pub-year">2018</span><span class="pub-cat" style="border-color:#7dd3fc;color:#7dd3fc;">Field Potentials</span></div>
+          <div class="pub-title">Investigating large-scale brain dynamics using field potential recordings: analysis and interpretation</div>
+          <div class="pub-authors">Pesaran B, Vinck M, Einevoll GT, Sirota A, Fries P, Siegel M, Truccolo W, <strong>Schroeder CE</strong>, Srinivasan R</div>
+          <div class="pub-journal">Nature Neuroscience 21(7):903–919 (2018) · PMID: 29942039</div>
+        </div>
+        <div class="pub-item" data-year="y2018" data-topic="networks">
+          <div class="pub-meta"><span class="pub-year">2018</span><span class="pub-cat" style="border-color:#34d399;color:#34d399;">Networks</span></div>
+          <div class="pub-title">Delineating the Macroscale Areal Organization of the Macaque Cortex In Vivo</div>
+          <div class="pub-authors">Xu T, Falchier A, Sullivan EL, Linn G, … <strong>Schroeder CE</strong>, Colcombe S, Fair DA, Milham MP</div>
+          <div class="pub-journal">Cell Reports 23(2):429–441 (2018) · PMCID: PMC6157013</div>
+        </div>
+        <div class="pub-item" data-year="y2018" data-topic="networks">
+          <div class="pub-meta"><span class="pub-year">2018</span><span class="pub-cat" style="border-color:#34d399;color:#34d399;">Networks</span></div>
+          <div class="pub-title">An Open Resource for Non-human Primate Imaging (PRIME-DE)</div>
+          <div class="pub-authors">Milham MP et al., … <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">Neuron 100(1):61–74 (2018) · PMCID: PMC6231397</div>
+        </div>
+        <div class="pub-item" data-year="y2018" data-topic="attn">
+          <div class="pub-meta"><span class="pub-year">2018</span><span class="pub-cat" style="border-color:#a78bfa;color:#a78bfa;">Attention</span></div>
+          <div class="pub-title">Hexadirectional Modulation of High-Frequency Activity in the Human Anterior Medial Temporal Lobe Maps Visual Space</div>
+          <div class="pub-authors">Staudigl T, Leszczynski M, Jacobs J, Sheth SA, <strong>Schroeder CE</strong>, Jensen O, Doeller CF</div>
+          <div class="pub-journal">Current Biology 28:3325–3329.e4 (2018)</div>
+        </div>
+        <div class="pub-item lead-author" data-year="y2017" data-topic="lfp">
+          <div class="pub-meta"><span class="pub-year">2017</span><span class="pub-cat" style="border-color:#7dd3fc;color:#7dd3fc;">Field Potentials</span></div>
+          <div class="pub-title">Primary Generators of Visually Evoked Field Potentials Recorded in the Macaque Auditory Cortex</div>
+          <div class="pub-authors">Kajikawa Y, Smiley JF, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">J Neuroscience 37(42):10139–10153 (2017) · PMCID: PMC5647771</div>
+        </div>
+        <div class="pub-item lead-author" data-year="y2017" data-topic="lfp">
+          <div class="pub-meta"><span class="pub-year">2017</span><span class="pub-cat" style="border-color:#7dd3fc;color:#7dd3fc;">Field Potentials</span></div>
+          <div class="pub-title">Limitations of ex vivo measurements for in vivo neuroscience</div>
+          <div class="pub-authors">Opitz A, Falchier A, Linn GS, Milham MP, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">PNAS 114:5243–5246 (2017) · PMCID: PMC5441777</div>
+        </div>
+        <div class="pub-item" data-year="y2017" data-topic="sensing">
+          <div class="pub-meta"><span class="pub-year">2017</span><span class="pub-cat" style="border-color:#ffc947;color:#ffc947;">Active Sensing</span></div>
+          <div class="pub-title">Neural entrainment to the beat: the "missing pulse" phenomenon</div>
+          <div class="pub-authors">Tal I, Large EW, Rabinovitch E, Wei Y, <strong>Schroeder CE</strong>, Poeppel D, Zion Golumbic E</div>
+          <div class="pub-journal">J Neuroscience 37(26):6331–6341 (2017) · PMCID: PMC5490067</div>
+        </div>
+        <div class="pub-item" data-year="earlier" data-topic="lfp">
+          <div class="pub-meta"><span class="pub-year">2016</span><span class="pub-cat" style="border-color:#7dd3fc;color:#7dd3fc;">Field Potentials</span></div>
+          <div class="pub-title">Spatiotemporal structure of intracranial electric fields induced by transcranial electric stimulation in humans and NHPs</div>
+          <div class="pub-authors">Opitz A, Falchier A, Yan CG, Yeagle EM, … Mehta AD, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">Scientific Reports 6:31236 (2016) · PMCID: PMC4989141</div>
+        </div>
+        <div class="pub-item lead-author" data-year="earlier" data-topic="sensing">
+          <div class="pub-meta"><span class="pub-year">2015</span><span class="pub-cat" style="border-color:#ffc947;color:#ffc947;">Active Sensing</span></div>
+          <div class="pub-title">Predictive motor control of sensory dynamics in auditory active sensing</div>
+          <div class="pub-authors">Morillon B, Hackett TA, Kajikawa Y, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">Current Opinion in Neurobiology 31:230–238 (2015) · PMCID: PMC4898262</div>
+        </div>
+        <div class="pub-item lead-author" data-year="earlier" data-topic="lfp">
+          <div class="pub-meta"><span class="pub-year">2015</span><span class="pub-cat" style="border-color:#7dd3fc;color:#7dd3fc;">Field Potentials</span></div>
+          <div class="pub-title">Generation of field potentials and modulation of their dynamics through volume integration of cortical activity</div>
+          <div class="pub-authors">Kajikawa Y, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">Journal of Neurophysiology 113:339–351 (2015) · PMCID: PMC4294577</div>
+        </div>
+        <div class="pub-item" data-year="earlier" data-topic="sensing">
+          <div class="pub-meta"><span class="pub-year">2014</span><span class="pub-cat" style="border-color:#ffc947;color:#ffc947;">Active Sensing</span></div>
+          <div class="pub-title">Motor contributions to the temporal precision of auditory attention</div>
+          <div class="pub-authors">Morillon B, <strong>Schroeder CE</strong>, Wyart V</div>
+          <div class="pub-journal">Nature Communications 5:5255 (2014) · PMCID: PMC4199392</div>
+        </div>
+        <div class="pub-item" data-year="earlier" data-topic="attn">
+          <div class="pub-meta"><span class="pub-year">2013</span><span class="pub-cat" style="border-color:#a78bfa;color:#a78bfa;">Attention</span></div>
+          <div class="pub-title">The spectrotemporal filter mechanism of auditory selective attention</div>
+          <div class="pub-authors">Lakatos P, Musacchia G, O'Connell MN, Falchier AY, Javitt DC, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">Neuron 77:750–761 (2013) · PMCID: PMC3583016</div>
+        </div>
+        <div class="pub-item" data-year="earlier" data-topic="clinical">
+          <div class="pub-meta"><span class="pub-year">2013</span><span class="pub-cat" style="border-color:#ff6b6b;color:#ff6b6b;">Clinical</span></div>
+          <div class="pub-title">Predictive suppression of cortical excitability and its deficit in schizophrenia</div>
+          <div class="pub-authors">Lakatos P, <strong>Schroeder CE</strong>, Leitman DI, Javitt DC</div>
+          <div class="pub-journal">J Neuroscience 33:11692–11702 (2013)</div>
+        </div>
+        <div class="pub-item" data-year="earlier" data-topic="attn">
+          <div class="pub-meta"><span class="pub-year">2013</span><span class="pub-cat" style="border-color:#a78bfa;color:#a78bfa;">Attention</span></div>
+          <div class="pub-title">Mechanisms underlying selective neuronal tracking of attended speech at a "cocktail party"</div>
+          <div class="pub-authors">Zion Golumbic EM, Ding N, Bickel S, Lakatos P, … <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">Neuron 77:980–991 (2013) · PMCID: PMC3891478</div>
+        </div>
+        <div class="pub-item lead-author" data-year="earlier" data-topic="lfp">
+          <div class="pub-meta"><span class="pub-year">2011</span><span class="pub-cat" style="border-color:#7dd3fc;color:#7dd3fc;">Field Potentials</span></div>
+          <div class="pub-title">How local is the local field potential?</div>
+          <div class="pub-authors">Kajikawa Y, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">Neuron 72:847–858 (2011) · PMCID: PMC3240862</div>
+        </div>
+        <div class="pub-item" data-year="earlier" data-topic="attn">
+          <div class="pub-meta"><span class="pub-year">2011</span><span class="pub-cat" style="border-color:#a78bfa;color:#a78bfa;">Attention</span></div>
+          <div class="pub-title">Tuning of the human neocortex to the temporal dynamics of attended events</div>
+          <div class="pub-authors">Besle J, Schevon CA, Mehta AD, Lakatos P, Goodman RR, McKhann GM, Emerson RG, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">J Neuroscience 31:3176–3185 (2011) · PMCID: PMC3081726</div>
+        </div>
+        <div class="pub-item" data-year="earlier" data-topic="attn">
+          <div class="pub-meta"><span class="pub-year">2011</span><span class="pub-cat" style="border-color:#a78bfa;color:#a78bfa;">Attention</span></div>
+          <div class="pub-title">Neuronal mechanisms and attentional modulation of corticothalamic alpha oscillations</div>
+          <div class="pub-authors">Bollimunta A, Mo J, <strong>Schroeder CE</strong>, Ding M</div>
+          <div class="pub-journal">J Neuroscience 31:4935–4943 (2011) · PMCID: PMC3505610</div>
+        </div>
+        <div class="pub-item lead-author" data-year="earlier" data-topic="sensing">
+          <div class="pub-meta"><span class="pub-year">2010</span><span class="pub-cat" style="border-color:#ffc947;color:#ffc947;">Active Sensing</span></div>
+          <div class="pub-title">Dynamics of Active Sensing and perceptual selection</div>
+          <div class="pub-authors"><strong>Schroeder CE</strong>, Wilson DA, Radman T, Scharfman H, Lakatos P</div>
+          <div class="pub-journal">Current Opinion in Neurobiology 20:172–176 (2010) · PMCID: PMC2963579</div>
+        </div>
+        <div class="pub-item lead-author" data-year="earlier" data-topic="sbnf">
+          <div class="pub-meta"><span class="pub-year">2009</span><span class="pub-cat" style="border-color:rgba(26,200,174,.3);color:var(--teal);">Slow Fluct.</span></div>
+          <div class="pub-title">Low-frequency neuronal oscillations as instruments of sensory selection</div>
+          <div class="pub-authors"><strong>Schroeder CE</strong>, Lakatos P</div>
+          <div class="pub-journal">Trends in Neurosciences 32:9–18 (2009) · PMCID: PMC2990947</div>
+        </div>
+        <div class="pub-item" data-year="earlier" data-topic="attn">
+          <div class="pub-meta"><span class="pub-year">2008</span><span class="pub-cat" style="border-color:#a78bfa;color:#a78bfa;">Attention</span></div>
+          <div class="pub-title">Entrainment of neuronal oscillations as a mechanism of attentional selection</div>
+          <div class="pub-authors">Lakatos P, Karmos G, Mehta AD, Ulbert I, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">Science 320:110–113 (2008)</div>
+        </div>
+        <div class="pub-item" data-year="earlier" data-topic="attn">
+          <div class="pub-meta"><span class="pub-year">2007</span><span class="pub-cat" style="border-color:#a78bfa;color:#a78bfa;">Attention</span></div>
+          <div class="pub-title">Neuronal oscillations and multisensory interaction in primary auditory cortex</div>
+          <div class="pub-authors">Lakatos P, Chen CM, O'Connell MN, Mills A, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">Neuron 53(2):279–292 (2007) · PMCID: PMC3717319</div>
+        </div>
+        <div class="pub-item" data-year="earlier" data-topic="attn">
+          <div class="pub-meta"><span class="pub-year">2000</span><span class="pub-cat" style="border-color:#a78bfa;color:#a78bfa;">Attention</span></div>
+          <div class="pub-title">Intermodal selective attention in monkeys I &amp; II</div>
+          <div class="pub-authors">Mehta AD, Ulbert I, <strong>Schroeder CE</strong></div>
+          <div class="pub-journal">Cerebral Cortex 10:343–358 &amp; 359–370 (2000)</div>
+        </div>
+
+      </div>
+      <div style="margin-top:20px;background:rgba(26,200,174,.05);border:1px solid rgba(26,200,174,.15);border-radius:10px;padding:16px 20px;font-size:.83rem;color:var(--text-dim);" class="fade-in">
+        <strong style="color:var(--white);">Note:</strong> Compiled from Dr. Schroeder's NIH biosketch and the Conte Center Progress Report (June 2022). For the complete up-to-date record visit <a href="http://www.ncbi.nlm.nih.gov/sites/myncbi/charles.schroeder.1/bibliography/40687225/public/?sort=date&direction=ascending" target="_blank" rel="noopener">his NCBI MyBibliography</a>.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── PARTICIPATE (public) / OPEN DATA (scientist) ── -->
+<section class="section" style="background:var(--navy-mid);" id="participate">
+  <div class="container">
+
+    <!-- PUBLIC: participate -->
+    <div class="pub-only">
+      <div class="section-header center fade-in"><div class="tag-coral tag">Volunteer Opportunities</div><div class="divider divider-center" style="background:var(--pub-accent);"></div><h2>Help us understand the brain</h2><p>By participating in a study, you directly contribute to discoveries that may improve treatments for ADHD, depression, anxiety, and other conditions.</p></div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:32px;">
+        <div class="participate-card fade-in">
+          <div style="font-size:1.9rem;margin-bottom:12px;">🧲</div>
+          <h3>Brain Scan + EEG Study</h3>
+          <p>Brain scan (MRI) while wearing a comfortable EEG cap. No injections, no radiation. You'll perform tasks or simply rest while we measure brain and body signals.</p>
+          <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:14px;">⏱ 2–3 hrs &nbsp;·&nbsp; 💰 Compensated &nbsp;·&nbsp; 📍 Orangeburg, NY</div>
+          <a href="mailto:charles.schroeder@nki.rfmh.org?subject=Participate in Study" class="btn btn-pub" style="font-size:.83rem;padding:9px 18px;">Express Interest</a>
+        </div>
+        <div class="participate-card fade-in">
+          <div style="font-size:1.9rem;margin-bottom:12px;">⚡</div>
+          <h3>EEG-Only Study</h3>
+          <p>A comfortable cap with small sensors on your scalp measures your brain's electrical signals. Completely non-invasive — just a cap. Perform cognitive tasks or rest.</p>
+          <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:14px;">⏱ 1–2 hrs &nbsp;·&nbsp; 💰 Compensated &nbsp;·&nbsp; 📍 Orangeburg, NY</div>
+          <a href="mailto:charles.schroeder@nki.rfmh.org?subject=EEG Study Interest" class="btn btn-pub" style="font-size:.83rem;padding:9px 18px;">Express Interest</a>
+        </div>
+        <div class="participate-card fade-in">
+          <div style="font-size:1.9rem;margin-bottom:12px;">💻</div>
+          <h3>Online Studies</h3>
+          <p>Some studies can be done from home — questionnaires about your thoughts, attention, and daily habits. Help us understand everyday cognitive experience.</p>
+          <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:14px;">⏱ 20–60 mins &nbsp;·&nbsp; 💰 Compensated &nbsp;·&nbsp; 🌐 Remote</div>
+          <a href="mailto:Alexandre.Franco@nki.rfmh.org?subject=Online Study Interest" class="btn btn-pub" style="font-size:.83rem;padding:9px 18px;">Express Interest</a>
+        </div>
+      </div>
+      <div style="background:rgba(255,201,71,.06);border:1px solid rgba(255,201,71,.2);border-radius:12px;padding:18px 22px;font-size:.87rem;color:var(--text-dim);" class="fade-in">
+        <strong style="color:var(--white);">Eligibility:</strong> Healthy adults aged 18–60, no neurological conditions. No metal implants for MRI studies. All data is de-identified and kept confidential. Participation is voluntary; you may withdraw at any time. Studies are conducted under IRB oversight at the Nathan Kline Institute.
+      </div>
+    </div>
+
+    <!-- SCIENTIST: open data -->
+    <div class="sci-only" id="data">
+      <div class="section-header center fade-in"><div class="tag">Open Science</div><div class="divider divider-center"></div><h2>Open Data &amp; Computational Resources</h2><p>Datasets and tools shared following FAIR principles for the neuroscience community.</p></div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+        <div class="data-card fade-in"><div style="font-size:1.8rem;margin-bottom:10px;">🧠</div><h3>NKI Rockland Sample</h3><p>Lifespan neuroimaging dataset (fMRI, EEG, behavioral phenotyping, 1000 participants ages 6–85). Continuously updated and openly shared via INDI.</p><a href="http://fcon_1000.projects.nitrc.org/indi/pro/nki.html" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:.82rem;padding:8px 16px;">Access →</a></div>
+        <div class="data-card fade-in"><div style="font-size:1.8rem;margin-bottom:10px;">🐒</div><h3>PRIME-DE</h3><p>PRIMatE Data Exchange — global open NHP neuroimaging resource (fMRI, structural MRI) aggregated across labs worldwide. Core data infrastructure for the center.</p><a href="http://fcon_1000.projects.nitrc.org/indi/PRIME/" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:.82rem;padding:8px 16px;">Access →</a></div>
+        <div class="data-card fade-in"><div style="font-size:1.8rem;margin-bottom:10px;">🌐</div><h3>HNN</h3><p>Human Neocortical Neurosolver — open-source biophysical modeling tool for interpreting EEG/MEG signals via neocortical circuit models. Developed by the Jones Lab (Project 4).</p><a href="https://hnn.brown.edu/" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:.82rem;padding:8px 16px;">Access →</a></div>
+        <div class="data-card fade-in"><div style="font-size:1.8rem;margin-bottom:10px;">🔧</div><h3>C-PAC</h3><p>Configurable Pipeline for the Analysis of Connectomes — open-source, high-throughput fMRI preprocessing and analysis platform. Developed by the Child Mind Institute.</p><a href="https://fcp-indi.github.io/" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:.82rem;padding:8px 16px;">Access →</a></div>
+        <div class="data-card fade-in"><div style="font-size:1.8rem;margin-bottom:10px;">📊</div><h3>Conte Center Datasets</h3><p>Multimodal datasets from the 2023–2028 funding period (fMRI+EEG, iEEG, NHP electrophysiology) will be shared via Core C as they become available.</p><a href="mailto:Alexandre.Franco@nki.rfmh.org" class="btn btn-outline" style="font-size:.82rem;padding:8px 16px;">Request Access</a></div>
+        <div class="data-card fade-in"><div style="font-size:1.8rem;margin-bottom:10px;">📋</div><h3>Data Standards</h3><p>Core C implements community data standards and provides a FAIR-compliant data management platform. Contact Core C for protocols, QC pipelines, and data sharing timelines.</p><a href="mailto:Alexandre.Franco@nki.rfmh.org" class="btn btn-outline" style="font-size:.82rem;padding:8px 16px;">Contact Core C</a></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── NEWS ── -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="section-header fade-in"><div class="tag">News</div><div class="divider"></div><h2>Latest from the Center</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+      <div style="background:var(--navy-card);border:1px solid rgba(26,200,174,.1);border-radius:var(--radius-lg);overflow:hidden;" class="fade-in">
+        <div style="height:120px;background:linear-gradient(135deg,var(--navy-mid),var(--navy));display:flex;align-items:center;justify-content:center;font-size:2.8rem;">🏆</div>
+        <div style="padding:18px;"><div style="font-size:.73rem;color:var(--teal);font-weight:600;margin-bottom:6px;">April 2023</div><h3 style="font-size:.95rem;margin-bottom:7px;">Conte Center Renewal Funded</h3><p style="font-size:.84rem;color:var(--text-dim);">NIH has awarded a 5-year, $16.2M renewal grant to the Conte Center at NKI, supporting the new program on Slow Brain Network Fluctuations.</p></div>
+      </div>
+      <div style="background:var(--navy-card);border:1px solid rgba(26,200,174,.1);border-radius:var(--radius-lg);overflow:hidden;" class="fade-in">
+        <div style="height:120px;background:linear-gradient(135deg,var(--navy-mid),var(--navy));display:flex;align-items:center;justify-content:center;font-size:2.8rem;">📄</div>
+        <div style="padding:18px;"><div style="font-size:.73rem;color:var(--teal);font-weight:600;margin-bottom:6px;">Ongoing</div><h3 style="font-size:.95rem;margin-bottom:7px;">Publications in Preparation</h3><p style="font-size:.84rem;color:var(--text-dim);">12+ papers are in preparation or under review from the Center's new funding period. Check back for updates as they are published.</p></div>
+      </div>
+      <div style="background:var(--navy-card);border:1px solid rgba(26,200,174,.1);border-radius:var(--radius-lg);overflow:hidden;" class="fade-in">
+        <div style="height:120px;background:linear-gradient(135deg,var(--navy-mid),var(--navy));display:flex;align-items:center;justify-content:center;font-size:2.8rem;">🤝</div>
+        <div style="padding:18px;"><div style="font-size:.73rem;color:var(--teal);font-weight:600;margin-bottom:6px;">2023–2028</div><h3 style="font-size:.95rem;margin-bottom:7px;">Recruiting Participants</h3><p style="font-size:.84rem;color:var(--text-dim);">
+          <span class="pub-only">We are actively recruiting healthy adult volunteers for fMRI and EEG studies at NKI.</span>
+          <span class="sci-only">Project 1 (NKI) is actively recruiting healthy adults for simultaneous fMRI/EEG + autonomic recording studies.</span>
+        </p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="nav-logo" style="margin-bottom:0;"><div class="nav-logo-icon">🧠</div><div>Conte Center <span style="color:var(--teal)">NKI</span></div></div><p>Investigating the neurobiology and cognitive role of Slow Brain Network Fluctuations.</p><div class="nih-badge">NIH · P50 MH109429 · 2023–2028</div></div>
+      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="team.html">Team</a></li><li><a href="publications.html">Publications</a></li></ul></div>
+      <div class="footer-col"><h4>This Page</h4><ul><li><a href="#publications">Publications</a></li><li><a href="#participate">Participate / Data</a></li><li><a href="#news">News</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:charles.schroeder@nki.rfmh.org">Charles Schroeder</a></li><li><a href="mailto:Alexandre.Franco@nki.rfmh.org">Alexandre Franco</a></li><li><a href="https://www.nki.rfmh.org" target="_blank" rel="noopener">NKI Website</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2024 Conte Center · Nathan Kline Institute</span><a href="mailto:charles.schroeder@nki.rfmh.org">Contact</a></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team — Conte Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .pi-card { background: var(--navy-card); border: 1px solid rgba(26,200,174,.13); border-radius: var(--radius-lg); padding: 30px; display: grid; grid-template-columns: 88px 1fr; gap: 24px; align-items: start; transition: all var(--transition); }
+    .pi-card:hover { border-color: rgba(26,200,174,.32); transform: translateY(-3px); }
+    .pi-avatar-lg { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--teal), var(--teal-dark)); display: flex; align-items: center; justify-content: center; font-size: 1.7rem; font-weight: 800; color: var(--navy); border: 3px solid rgba(26,200,174,.3); }
+    .pi-card h3 { font-size: 1.08rem; margin-bottom: 3px; }
+    .pi-title  { font-size: .83rem; color: var(--teal); font-weight: 600; margin-bottom: 2px; }
+    .pi-org    { font-size: .8rem; color: var(--text-dim); margin-bottom: 10px; }
+    .pi-card p { font-size: .87rem; color: var(--text-dim); line-height: 1.75; }
+    .pi-tags   { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .pi-tag    { font-size: .7rem; font-weight: 600; background: rgba(26,200,174,.08); border: 1px solid rgba(26,200,174,.2); color: var(--teal); border-radius: 4px; padding: 2px 8px; }
+    .lead-chip { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,201,71,.1); border: 1px solid rgba(255,201,71,.3); color: var(--amber); border-radius: 4px; padding: 2px 8px; font-size: .68rem; font-weight: 700; margin-left: 8px; }
+    @media (max-width: 560px) { .pi-card { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🧠</div><div>Conte Center <span>NKI</span></div></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li>
+      <li><a href="team.html">Team</a></li><li><a href="publications.html">Publications</a></li>
+    </ul>
+    <div class="audience-toggle">
+      <button class="toggle-btn pub" data-mode="public">👤 General Public</button>
+      <button class="toggle-btn sci" data-mode="scientist">🔬 Scientist</button>
+    </div>
+    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mode-banner" id="modeBanner"></div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="tag">Our Team</div>
+    <div class="pub-only"><h1>The scientists asking <em style="font-style:normal;color:var(--teal)">big questions</em></h1><p>Researchers from neuroscience, psychiatry, computer science, and physics — united by curiosity about the brain's hidden rhythms and their impact on human health.</p></div>
+    <div class="sci-only"><h1>Center Investigators &amp; <em style="font-style:normal;color:var(--teal)">Key Personnel</em></h1><p>Multi-PI leadership team, project leads, support core directors, and co-investigators across 15 partner institutions.</p></div>
+  </div>
+</div>
+
+<!-- ── Center Leadership ── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="tag">Center Leadership</div><div class="divider"></div>
+      <div class="pub-only"><h2>Leading the research</h2></div>
+      <div class="sci-only"><h2>Contact PI &amp; Co-Director</h2></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px;">
+      <div class="pi-card fade-in">
+        <div class="pi-avatar-lg">CS</div>
+        <div>
+          <h3>Charles E. Schroeder, PhD <span class="lead-chip">★ Contact PI</span></h3>
+          <div class="pi-title">Research Scientist VII, Professor</div>
+          <div class="pi-org">Nathan Kline Institute for Psychiatric Research &amp; Icahn School of Medicine at Mount Sinai, NY</div>
+          <div class="pub-only"><p>Dr. Schroeder has spent his career studying how the brain's rhythmic activity shapes perception and cognition. He directs the Conte Center and leads Project 3, using tiny electrode arrays in non-human primates to uncover the cellular machinery behind slow brain rhythms. His lab asks: what physical processes inside brain circuits generate these slow waves, and how do they coordinate thought and attention across the whole brain?</p></div>
+          <div class="sci-only"><p>Systems neuroscientist specializing in laminar electrophysiology in awake NHPs, active sensing, oscillatory dynamics, and multiscale physiology of brain network fluctuations. Directs the Translational Neuroscience Lab Division at NKI. Contact PI for the Conte Center; leads Project 3 (NHP multiscale physiology and causal mechanisms) and Core A (administrative/technical support). Co-PI on BRAIN R01 (MH111439) with Milham. PhD, Psychology, 1984, UNC Greensboro.</p></div>
+          <div class="pi-tags"><span class="pi-tag">NHP Electrophysiology</span><span class="pi-tag">Active Sensing</span><span class="pi-tag">Brain Rhythms</span><span class="pi-tag">Causal Mechanisms</span><span class="pi-tag">Project 3 Lead</span></div>
+        </div>
+      </div>
+      <div class="pi-card fade-in">
+        <div class="pi-avatar-lg">MM</div>
+        <div>
+          <h3>Michael P. Milham, PhD, MD <span class="lead-chip">Co-Director</span></h3>
+          <div class="pi-title">
+            <span class="pub-only">Research Psychiatrist &amp; Scientific Director</span>
+            <span class="sci-only">Vice President of Research; Director, Center for Developing Brain; Director, C-BIN at NKI</span>
+          </div>
+          <div class="pi-org">Child Mind Institute &amp; Nathan Kline Institute, New York, NY</div>
+          <div class="pub-only"><p>Dr. Milham is one of the leading advocates for open neuroscience — the idea that brain data should be freely shared so all scientists can benefit. He leads our human brain scanning program (Project 1), where volunteers undergo simultaneous MRI and EEG recordings across a wide range of tasks. He also helped build some of the most widely used open brain imaging datasets in the world.</p></div>
+          <div class="sci-only"><p>Cognitive neuroscientist focused on large-scale neuroimaging, connectomics, and open science infrastructure. PI of the NKI-Rockland Sample and co-founder of the 1000 Functional Connectomes Project / INDI. Leads Project 1 (macroscale fMRI/EEG characterization of SBNFs) and provides oversight for Project 4 and Cores B and C. Highly Cited Researcher (Clarivate, 2014–2021); 2020 OHBM Open Science Award. PhD, Cognitive Neuroscience; MD, 2002/2004, Univ. Illinois Urbana-Champaign.</p></div>
+          <div class="pi-tags"><span class="pi-tag">fMRI / EEG</span><span class="pi-tag">Open Science</span><span class="pi-tag">Connectomics</span><span class="pi-tag">Project 1 Lead</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Project PIs ── -->
+<section class="section" style="background:var(--navy-mid);border-top:1px solid rgba(26,200,174,.08);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="tag">Project Leaders</div><div class="divider"></div>
+      <div class="pub-only"><h2>Research project leaders</h2></div>
+      <div class="sci-only"><h2>Project principal investigators</h2></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div class="pi-card fade-in">
+        <div class="pi-avatar-lg" style="width:68px;height:68px;font-size:1.4rem;">RK</div>
+        <div>
+          <h3>Robert T. Knight, PhD</h3>
+          <div class="pi-title">Professor of Neuroscience, Helen Wills Neuroscience Institute</div>
+          <div class="pi-org">University of California, Berkeley &amp; Feinstein Institutes for Medical Research</div>
+          <div class="pub-only"><p>Dr. Knight's lab works with epilepsy patients who have electrodes placed directly on their brain's surface during medical care. With patients' consent, this provides unparalleled access to human brain activity. His team studies how slow brain rhythms influence when your attention drifts toward internal thoughts, and when it snaps back to focus on the outside world.</p></div>
+          <div class="sci-only"><p>Pioneer in intracranial EEG research on human cognitive control and attention. Leads Project 2 (meso-microscale physiology via iEEG). Multi-site iEEG program spanning UCSF, UC Irvine, UC Davis, UPitt, WashU. Research focuses on DMN–FPCN interactions during internally vs. externally directed attention using BHA, SUA, PAC, and Granger causality. Collaborates with co-leaders Jack Lin (UC Davis), Avniel Ghuman (UPitt), and Stephan Bickel (Feinstein).</p></div>
+          <div class="pi-tags"><span class="pi-tag">Intracranial EEG</span><span class="pi-tag">Default Mode Network</span><span class="pi-tag">Attention</span><span class="pi-tag">Project 2 Lead</span></div>
+        </div>
+      </div>
+      <div class="pi-card fade-in">
+        <div class="pi-avatar-lg" style="width:68px;height:68px;font-size:1.4rem;">SJ</div>
+        <div>
+          <h3>Stephanie R. Jones, PhD</h3>
+          <div class="pi-title">Professor of Neuroscience, Carney Institute for Brain Science</div>
+          <div class="pi-org">Brown University, Providence, RI</div>
+          <div class="pub-only"><p>Dr. Jones builds detailed computer models of brain circuits — virtual brains that generate the same patterns of brain waves we see in real recordings. By tweaking the model and observing what changes, her team tests theories about what causes slow brain rhythms without needing an electrode. Their models also generate new predictions that guide animal and human experiments.</p></div>
+          <div class="sci-only"><p>Computational neuroscientist specializing in biophysically realistic models of neocortical circuits to interpret human EEG/MEG. Developer of the Human Neocortical Neurosolver (HNN). Leads Project 4 (integrated network and cell-circuit models). Co-leads with John Murray (Yale) who focuses on large-scale network modeling. Aims to develop multi-scale hybrid models synthesizing empirical data from Projects 1–3 to test mechanistic hypotheses and guide experimental design.</p></div>
+          <div class="pi-tags"><span class="pi-tag">Computational Neuroscience</span><span class="pi-tag">Biophysical Models</span><span class="pi-tag">EEG/MEG</span><span class="pi-tag">Project 4 Lead</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Core Leaders ── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="tag">Support Core Leaders</div><div class="divider"></div>
+      <div class="pub-only"><h2>Data analysis &amp; open science infrastructure</h2></div>
+      <div class="sci-only"><h2>Core B and Core C directors</h2></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+      <div class="pi-card fade-in" style="grid-template-columns:60px 1fr;">
+        <div class="pi-avatar-lg" style="width:56px;height:56px;font-size:1.2rem;">TX</div>
+        <div>
+          <h3>Ting Xu, PhD</h3>
+          <div class="pi-title">Research Scientist</div>
+          <div class="pi-org">Child Mind Institute &amp; Vanderbilt University</div>
+          <div class="pub-only"><p>Dr. Xu develops mathematical tools that allow scientists to compare brain data collected in different ways — across different species, imaging modalities, and individuals. Her work is the connective tissue of the whole center, making it possible to draw meaningful conclusions by combining data from all four projects.</p></div>
+          <div class="sci-only"><p>Leads Core B (Multimodal Data Analysis &amp; Integration). Pioneer in cross-species functional alignment frameworks (Xu et al., 2020, NeuroImage). Develops state-space frameworks for decomposing joint EEG/fMRI/physiological dynamics. Collaborates with co-leader Catie Chang (Vanderbilt) on multimodal alignment and arousal characterization.</p></div>
+          <div class="pi-tags"><span class="pi-tag">Cross-Species Alignment</span><span class="pi-tag">Multimodal</span><span class="pi-tag">Core B Lead</span></div>
+        </div>
+      </div>
+      <div class="pi-card fade-in" style="grid-template-columns:60px 1fr;">
+        <div class="pi-avatar-lg" style="width:56px;height:56px;font-size:1.2rem;">AF</div>
+        <div>
+          <h3>Alexandre R. Franco, PhD</h3>
+          <div class="pi-title">Research Scientist</div>
+          <div class="pi-org">Nathan Kline Institute for Psychiatric Research, NY</div>
+          <div class="pub-only"><p>Dr. Franco is the center's data librarian and infrastructure architect. He ensures every dataset generated by our 15-institution network is carefully quality-checked, standardized, and made openly available to scientists worldwide — following FAIR principles that are transforming how science is conducted.</p></div>
+          <div class="sci-only"><p>Leads Core C (DASS-C — Data Aggregation, Standardization and Sharing). Implements FAIR data principles across all center projects. Develops data management infrastructure for QC, standardization, and open sharing via INDI/NKI infrastructure. Co-investigator: Eduardo Moreira (NKI). Background in neuroimaging informatics and large-scale open data initiatives (NKI-Rockland Sample, PRIME-DE).</p></div>
+          <div class="pi-tags"><span class="pi-tag">Data Science</span><span class="pi-tag">FAIR Principles</span><span class="pi-tag">Open Neuroimaging</span><span class="pi-tag">Core C Lead</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Join section ── -->
+<section class="section-sm" style="background:var(--navy-mid);border-top:1px solid rgba(26,200,174,.08);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+      <div style="background:linear-gradient(135deg,rgba(26,200,174,.07),rgba(26,200,174,.02));border:1.5px solid rgba(26,200,174,.2);border-radius:var(--radius-lg);padding:34px;" class="fade-in">
+        <div style="font-size:1.8rem;margin-bottom:14px;">🎓</div>
+        <h3 style="margin-bottom:8px;">
+          <span class="pub-only">Interested in joining our lab?</span>
+          <span class="sci-only">Trainee &amp; postdoctoral opportunities</span>
+        </h3>
+        <div class="pub-only"><p style="color:var(--text-dim);font-size:.88rem;line-height:1.75;margin-bottom:18px;">We welcome applications from graduate students and postdoctoral researchers interested in brain rhythms, cognitive neuroscience, computational modeling, or open data science. Training opportunities are available across all partner institutions.</p></div>
+        <div class="sci-only"><p style="color:var(--text-dim);font-size:.88rem;line-height:1.75;margin-bottom:18px;">The Center actively supports trainee development across all projects. Opportunities exist for graduate students and postdoctoral fellows in systems neurophysiology (NHP laminar electrophysiology), human neuroimaging (fMRI/EEG), iEEG cognitive neuroscience, computational/biophysical modeling, and data science / open neuroimaging infrastructure.</p></div>
+        <a href="mailto:charles.schroeder@nki.rfmh.org" class="btn btn-outline" style="font-size:.88rem;">Contact us about positions →</a>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(255,107,107,.07),rgba(255,107,107,.02));border:1.5px solid rgba(255,107,107,.2);border-radius:var(--radius-lg);padding:34px;" class="fade-in">
+        <div style="font-size:1.8rem;margin-bottom:14px;">🙋</div>
+        <h3 style="margin-bottom:8px;">
+          <span class="pub-only">Volunteer for a study?</span>
+          <span class="sci-only">Research participant recruitment</span>
+        </h3>
+        <div class="pub-only"><p style="color:var(--text-dim);font-size:.88rem;line-height:1.75;margin-bottom:18px;">We recruit healthy adult volunteers for brain imaging (MRI) and EEG studies at the Nathan Kline Institute in Orangeburg, NY. Participation is voluntary, confidential, and compensated. Studies take 1–3 hours.</p></div>
+        <div class="sci-only"><p style="color:var(--text-dim);font-size:.88rem;line-height:1.75;margin-bottom:18px;">Project 1 (NKI) is actively recruiting healthy adults (18–60 years) for simultaneous fMRI/EEG + autonomic recording studies. Inclusion/exclusion criteria: no neurological or psychiatric diagnoses, no MRI contraindications, standard CBIN screening. Contact the NKI CBIN for protocols and IRB details.</p></div>
+        <a href="publications.html#participate" class="btn btn-pub" style="font-size:.88rem;">Learn about participating →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="nav-logo" style="margin-bottom:0;"><div class="nav-logo-icon">🧠</div><div>Conte Center <span style="color:var(--teal)">NKI</span></div></div><p>Funded by NIH P50 MH109429 · 2023–2028.</p></div>
+      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="team.html">Team</a></li><li><a href="publications.html">Publications</a></li></ul></div>
+      <div class="footer-col"><h4>Team</h4><ul><li><a href="#leadership">Center PIs</a></li><li><a href="#project-pis">Project PIs</a></li><li><a href="#cores">Core Leaders</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:charles.schroeder@nki.rfmh.org">Charles Schroeder</a></li><li><a href="mailto:Alexandre.Franco@nki.rfmh.org">Alexandre Franco</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2024 Conte Center · NKI</span><a href="mailto:charles.schroeder@nki.rfmh.org">Contact</a></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

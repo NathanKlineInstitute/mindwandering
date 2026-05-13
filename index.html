@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conte Center — Slow Brain Network Fluctuations</title>
+  <meta name="description" content="An NIH-funded Conte Center at the Nathan Kline Institute investigating the neurobiology and cognitive role of slow brain network fluctuations."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">🧠</div>
+      <div>Conte Center <span>NKI</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="publications.html">Publications</a></li>
+    </ul>
+    <!-- Audience Toggle -->
+    <div class="audience-toggle" role="group" aria-label="Audience mode">
+      <button class="toggle-btn pub" data-mode="public">👤 General Public</button>
+      <button class="toggle-btn sci" data-mode="scientist">🔬 Scientist</button>
+    </div>
+    <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- Mode banner (just below nav) -->
+<div class="mode-banner" id="modeBanner"></div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- Left text -->
+      <div>
+        <p class="hero-eyebrow">NIH Conte Center · P50 MH109429 · Nathan Kline Institute</p>
+
+        <!-- PUBLIC hero text -->
+        <div class="pub-only">
+          <h1>Your mind <em>wanders</em>.<br>We want to know why.</h1>
+          <p class="hero-lead">You're reading this — but part of your brain is already somewhere else. That's not a flaw. It may be one of the most important things your brain does. <strong>We're neuroscientists on a mission to find out why.</strong></p>
+          <div class="hero-ctas">
+            <a href="research.html" class="btn btn-primary">Discover the Research</a>
+            <a href="publications.html#participate" class="btn btn-pub">Volunteer for a Study</a>
+          </div>
+        </div>
+
+        <!-- SCIENTIST hero text -->
+        <div class="sci-only">
+          <h1>Neurobiology &amp; Cognitive Role of <em>Slow Brain Network Fluctuations</em></h1>
+          <p class="hero-lead">An integrative multi-PI program combining fMRI/EEG in humans, iEEG in surgical epilepsy patients, NHP laminar electrophysiology, and biophysical modeling to elucidate the role of <strong>SBNFs (&lt;1 Hz)</strong> in affect, cognition, and behavior.</p>
+          <div class="hero-ctas">
+            <a href="research.html" class="btn btn-primary">View Research Projects</a>
+            <a href="publications.html" class="btn btn-sci">Publications &amp; Data</a>
+          </div>
+        </div>
+
+        <div class="hero-proof">
+          <div class="proof-avatars">
+            <div class="proof-avatar">CS</div><div class="proof-avatar">MM</div>
+            <div class="proof-avatar">RK</div><div class="proof-avatar">SJ</div>
+          </div>
+          <span>15 institutions · NIH-funded 2023–2028</span>
+        </div>
+      </div>
+
+      <!-- Right: Interactive brain -->
+      <div class="brain-wrapper">
+        <div id="brainTooltip" class="brain-tooltip">
+          <h4>Region</h4>
+          <p class="tt-text"></p>
+          <p class="tt-pub"></p>
+          <p class="tt-sci"></p>
+        </div>
+        <svg id="brain-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" aria-label="Interactive brain — click a region to explore">
+          <defs>
+            <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#1ac8ae" stop-opacity=".07"/>
+              <stop offset="100%" stop-color="#0a1c35" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <ellipse cx="250" cy="200" rx="220" ry="178" fill="url(#bgGlow)"/>
+          <path d="M 120 220 C 110 180 115 140 130 115 C 148 87 175 72 200 70 C 225 68 248 75 265 70 C 288 63 315 65 335 80 C 358 97 370 125 372 155 C 375 180 368 205 360 225 C 352 245 340 258 330 270 C 318 283 305 290 292 295 C 278 300 262 300 248 296 C 232 291 218 280 205 275 C 190 269 175 268 162 260 C 145 250 128 242 120 220 Z" fill="#0d2040" stroke="#1ac8ae" stroke-width="2" opacity=".9"/>
+          <path class="brain-region" data-region="occipital"  d="M 330 270 C 345 260 358 245 360 225 C 365 210 362 195 355 182 C 348 195 340 215 332 230 C 326 243 325 258 330 270 Z" fill="#0e6e6e" stroke="#1ac8ae" stroke-width="1.2" opacity=".8"/>
+          <path class="brain-region" data-region="temporal"   d="M 162 260 C 148 250 136 240 128 228 C 120 218 119 200 122 188 C 130 190 140 200 148 215 C 156 230 162 248 162 260 Z" fill="#0a5a7a" stroke="#1ac8ae" stroke-width="1.2" opacity=".8"/>
+          <path class="brain-region" data-region="motor"      d="M 248 75 C 260 72 275 73 290 78 C 300 82 310 90 316 100 C 305 105 292 108 278 108 C 264 108 252 103 248 95 Z" fill="#1a5e8a" stroke="#1ac8ae" stroke-width="1.2" opacity=".8"/>
+          <path class="brain-region" data-region="parietal"   d="M 290 78 C 315 85 340 100 355 120 C 362 133 365 148 363 162 C 350 155 335 148 320 140 C 305 132 295 118 290 105 C 287 95 287 85 290 78 Z" fill="#135e7a" stroke="#1ac8ae" stroke-width="1.2" opacity=".8"/>
+          <path class="brain-region" data-region="prefrontal" d="M 130 115 C 148 87 175 72 200 70 C 210 69 220 70 230 72 C 220 88 212 108 210 130 C 205 152 204 170 204 185 C 190 178 175 165 162 152 C 148 138 136 127 130 115 Z" fill="#0f4e6e" stroke="#1ac8ae" stroke-width="1.2" opacity=".8"/>
+          <path class="brain-region" data-region="dmn"        d="M 280 170 C 295 162 314 158 330 162 C 344 167 352 178 352 192 C 346 188 334 184 320 184 C 306 184 292 187 282 192 C 278 185 278 177 280 170 Z" fill="#1e3a78" stroke="#4a80d8" stroke-width="1.2" opacity=".85"/>
+          <path class="brain-region" data-region="insula"     d="M 205 185 C 215 178 228 175 242 176 C 255 177 265 182 270 190 C 260 195 248 197 236 197 C 222 197 210 194 205 185 Z" fill="#3a2a6e" stroke="#9a70d8" stroke-width="1.2" opacity=".85"/>
+          <path class="brain-region" data-region="cingulate"  d="M 210 130 C 222 122 240 118 256 120 C 268 122 278 130 280 140 C 268 145 254 147 240 147 C 226 147 214 142 210 130 Z" fill="#2a4a88" stroke="#5a90e8" stroke-width="1.2" opacity=".85"/>
+          <path class="brain-region" data-region="temporal"   d="M 204 220 C 196 235 188 252 186 268 C 192 275 203 278 215 278 C 228 278 238 273 244 265 C 236 256 224 242 214 230 Z" fill="#0a5a7a" stroke="#1ac8ae" stroke-width="1.2" opacity=".8"/>
+          <path d="M 165 150 Q 190 160 215 155 Q 238 150 255 155" fill="none" stroke="#1ac8ae" stroke-width=".6" opacity=".3"/>
+          <path d="M 175 175 Q 200 185 225 180 Q 250 175 268 180" fill="none" stroke="#1ac8ae" stroke-width=".6" opacity=".3"/>
+          <path d="M 230 72 Q 240 100 242 130 Q 244 155 242 178" fill="none" stroke="#1ac8ae" stroke-width=".6" opacity=".3"/>
+          <path d="M 312 105 Q 320 130 322 158 Q 323 178 318 198" fill="none" stroke="#1ac8ae" stroke-width=".6" opacity=".3"/>
+          <path d="M 205 275 C 205 285 207 295 210 305 C 214 318 220 328 225 330 C 230 332 234 330 236 325 C 238 318 238 306 236 295 C 235 285 230 278 225 275 Z" fill="#0d2040" stroke="#1ac8ae" stroke-width="1.5" opacity=".7"/>
+          <path d="M 305 295 C 315 292 330 292 340 298 C 352 305 358 320 355 335 C 350 348 338 355 325 356 C 310 356 298 348 294 336 C 290 322 294 305 305 295 Z" fill="#0b1e3a" stroke="#1ac8ae" stroke-width="1.5" opacity=".7"/>
+          <path d="M 305 310 Q 322 316 338 310" fill="none" stroke="#1ac8ae" stroke-width=".8" opacity=".4"/>
+          <path d="M 300 322 Q 320 328 340 322" fill="none" stroke="#1ac8ae" stroke-width=".8" opacity=".4"/>
+          <path d="M 298 335 Q 318 340 338 335" fill="none" stroke="#1ac8ae" stroke-width=".8" opacity=".4"/>
+          <text x="250" y="378" text-anchor="middle" font-size="11" fill="#7a91b0" font-family="Inter,sans-serif">← Click a region to explore →</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="stat-num" data-count="16">0</div><div class="stat-label">Million $ NIH Funding</div></div>
+      <div class="stat-item"><div class="stat-num" data-count="15">0</div><div class="stat-label">Partner Institutions</div></div>
+      <div class="stat-item"><div class="stat-num" data-count="4">0</div><div class="stat-label">Research Projects</div></div>
+      <div class="stat-item">
+        <!-- public: % waking hours mind-wandering; scientist: publications -->
+        <div class="pub-only"><div class="stat-num" data-count="50">0</div><div class="stat-label">% of Waking Hours Mind-Wandering</div></div>
+        <div class="sci-only"><div class="stat-num" data-count="66">0</div><div class="stat-label">Publications (Prior Period)</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ THE SCIENCE EXPLAINER ═══ -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;">
+
+      <!-- Left text — dual mode -->
+      <div>
+        <!-- PUBLIC -->
+        <div class="pub-only fade-in">
+          <div class="mode-label pub">For Everyone</div>
+          <div class="tag">The Science</div>
+          <div class="divider"></div>
+          <h2>Your brain has slow rhythms you've never heard of</h2>
+          <p style="color:var(--text-dim);line-height:1.8;margin-bottom:16px;">Think of brain activity like a symphony: rapid violin notes are your thoughts and reactions. But underneath, there's a slow bass drum — cycling over <em style="color:var(--white)">seconds and minutes</em> — that sets the tempo for everything else.</p>
+          <p style="color:var(--text-dim);line-height:1.8;margin-bottom:16px;">We call these <strong>slow brain rhythms</strong>. They continuously shift you between two modes: focused on the outside world, or turned inward toward memories, plans, and daydreams.</p>
+          <p style="color:var(--text-dim);line-height:1.8;margin-bottom:24px;">When these rhythms break down, the consequences may be profound — contributing to ADHD, depression, anxiety, and schizophrenia.</p>
+          <a href="research.html" class="btn btn-outline">How we study this →</a>
+        </div>
+
+        <!-- SCIENTIST -->
+        <div class="sci-only fade-in">
+          <div class="mode-label sci">For Scientists</div>
+          <div class="tag">Overarching Hypothesis</div>
+          <div class="divider"></div>
+          <h2>Slow fluctuations (&lt;1 Hz) are critical determinants of cognition and behavior</h2>
+          <p style="color:var(--text-dim);line-height:1.8;margin-bottom:16px;">This Conte Center tests the hypothesis that <strong>slow fluctuations of neural activity extending below 1 Hz, down to at least 0.01 Hz</strong> (timescales of seconds to 10s of seconds) are critical determinants of affect, cognition, and behavior.</p>
+          <div class="hyp-box">
+            <div class="hyp-label">Linking Hypothesis 1</div>
+            <p>Local slow neural fluctuations link to larger-scale <strong style="color:var(--white)">Slow Brain Network Fluctuations (SBNFs)</strong> that significantly impact cognitive processes (attention, RT), behavioral indices, and autonomic measures (HRV, pupil diameter).</p>
+          </div>
+          <div class="hyp-box">
+            <div class="hyp-label">Linking Hypothesis 2</div>
+            <p>There is <strong style="color:var(--white)">hierarchical phase-amplitude coupling (PAC)</strong> of neural activity across frequency ranges — the phase of lower-frequency activity controls the amplitude of higher-frequency activity, integrating across timescales.</p>
+          </div>
+          <a href="research.html" class="btn btn-outline" style="margin-top:12px;">View Projects &amp; Specific Aims →</a>
+        </div>
+      </div>
+
+      <!-- Right: wave + legend -->
+      <div class="fade-in">
+        <p style="text-align:center;font-size:.78rem;color:var(--text-dim);margin-bottom:12px;">
+          <span class="pub-only">Slow rhythms (teal) conduct all faster brain activity</span>
+          <span class="sci-only">Infraslow phase modulates amplitude of higher-frequency bands (PAC)</span>
+        </p>
+        <div style="background:var(--navy-card);border:1px solid rgba(26,200,174,.15);border-radius:var(--radius-lg);padding:24px;">
+          <canvas id="waveCanvas"></canvas>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:14px;">
+            <div style="display:flex;align-items:center;gap:6px;font-size:.74rem;color:#1ac8ae;"><div style="width:18px;height:2.5px;background:#1ac8ae;border-radius:2px;"></div>
+              <span class="pub-only">Slow (seconds–minutes)</span>
+              <span class="sci-only">Infraslow / delta (&lt;1 Hz)</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:.74rem;color:#ffc947;"><div style="width:18px;height:2px;background:#ffc947;border-radius:2px;"></div>
+              <span class="pub-only">Medium rhythms</span>
+              <span class="sci-only">Theta / alpha (4–12 Hz)</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:.74rem;color:#a78bfa;"><div style="width:18px;height:2px;background:#a78bfa;border-radius:2px;"></div>
+              <span class="pub-only">Fast rhythms</span>
+              <span class="sci-only">Gamma / BHA (&gt;30 Hz)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY IT MATTERS ═══ -->
+<section class="section" style="background:var(--navy-mid);border-top:1px solid rgba(26,200,174,.08);border-bottom:1px solid rgba(26,200,174,.08);">
+  <div class="container">
+    <div class="section-header center fade-in">
+      <div class="tag">Why It Matters</div>
+      <div class="divider divider-center"></div>
+      <span class="pub-only"><h2>From slow rhythms to everyday life — and mental health</h2></span>
+      <span class="sci-only"><h2>Scientific significance and translational relevance</h2></span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;">
+
+      <div class="card fade-in">
+        <div class="card-icon">🎯</div>
+        <div class="pub-only"><h3>Why focus naturally ebbs and flows</h3><p>Slow rhythms continuously cycle the brain between focused attention and mind-wandering. Understanding this may reveal why concentration is hard for some people — and how to help.</p></div>
+        <div class="sci-only"><h3>Attentional sampling and SBNFs</h3><p>SBNFs gate fronto-parietal network engagement through PAC, driving rhythmic fluctuations in perceptual sensitivity and behavioral performance across seconds-to-minutes timescales.</p></div>
+      </div>
+
+      <div class="card fade-in">
+        <div class="card-icon">💭</div>
+        <div class="pub-only"><h3>Why mind-wandering is actually useful</h3><p>Off-task thought supports creativity, long-term planning, and emotional processing. SBNFs orchestrate when and how the brain productively turns inward.</p></div>
+        <div class="sci-only"><h3>Default mode network regulation</h3><p>SBNFs drive alternation between task-positive and default mode network dominance. PAC mediates the temporal structure of DMN activation and internally-directed cognition.</p></div>
+      </div>
+
+      <div class="card fade-in">
+        <div class="card-icon">💙</div>
+        <div class="pub-only"><h3>Mental health connections</h3><p>Disrupted slow rhythms are implicated in ADHD, depression, and schizophrenia. Our research may point toward new treatments that target these underlying rhythmic mechanisms.</p></div>
+        <div class="sci-only"><h3>Neuropsychiatric translational goals</h3><p>Disrupted SBNFs are linked to ADHD, MDD, and schizophrenia. The Center aims to develop mechanistic understanding sufficient to propose novel neuromodulation-based interventions.</p></div>
+      </div>
+
+      <div class="card fade-in">
+        <div class="card-icon">⚡</div>
+        <div class="pub-only"><h3>Brain and body are in constant dialogue</h3><p>Slow brain rhythms are linked to heart rate, breathing, and pupil dilation. Understanding this brain–body connection opens new doors for understanding arousal and mental states.</p></div>
+        <div class="sci-only"><h3>Autonomic-neural coupling</h3><p>SBNFs co-vary with cardiac variability, pupillometry, electrodermal activity, and respiration. Project 1 simultaneously records all modalities to map these relationships multimodally.</p></div>
+      </div>
+
+      <div class="card fade-in">
+        <div class="card-icon">🔬</div>
+        <div class="pub-only"><h3>Studying the brain at every scale</h3><p>We study these rhythms from single brain cells all the way to whole-brain networks — bridging scales in a way that no single approach alone can achieve.</p></div>
+        <div class="sci-only"><h3>Multi-scale integrative approach</h3><p>fMRI/EEG (macroscale) → iEEG/ECoG (mesoscale) → laminar LFP/MUA (microscale) → biophysical modeling bridges all levels, with cross-species alignment via Core B.</p></div>
+      </div>
+
+      <div class="card fade-in">
+        <div class="card-icon">🌐</div>
+        <div class="pub-only"><h3>Open science for everyone</h3><p>All datasets are freely shared with researchers worldwide. Our data-sharing infrastructure means discoveries reach other scientists — and patients — as quickly as possible.</p></div>
+        <div class="sci-only"><h3>FAIR data principles and open sharing</h3><p>Core C implements FAIR (Findable, Accessible, Interoperable, Reusable) data management. All processed datasets are released via INDI/NKI infrastructure following quality control by Core C.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROJECT PREVIEWS ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="tag">Research Program</div>
+      <div class="divider"></div>
+      <span class="pub-only"><h2>Four projects. One integrative vision.</h2><p style="color:var(--text-dim)">Our center brings together human brain scanning, direct brain recordings, animal studies, and computer modeling — all focused on the same slow rhythms.</p></span>
+      <span class="sci-only"><h2>Four research projects + two support cores</h2><p style="color:var(--text-dim)">Combining fMRI/EEG in humans, iEEG in surgical epilepsy patients, laminar electrophysiology in NHPs, and biophysical modeling — linked by multimodal alignment (Core B) and FAIR data sharing (Core C).</p></span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+
+      <!-- P1 -->
+      <div class="project-card fade-in">
+        <div class="project-num">Project 1 · Child Mind Institute / NKI</div>
+        <h3>Macroscale Physiology &amp; Cognitive Correlates</h3>
+        <div class="pub-only"><p style="font-size:.88rem;color:var(--text-dim);line-height:1.7;">We invite healthy adults for simultaneous brain scans (MRI) and brainwave recordings (EEG) while they perform tasks or freely daydream. We also track their heart rate, breathing, and pupil size — and periodically ask "What were you just thinking about?" to capture the contents of internal thought.</p></div>
+        <div class="sci-only"><p style="font-size:.85rem;color:var(--text-dim);line-height:1.7;">Simultaneous fMRI/EEG + autonomic measures (ECG, EDA, pupillometry, respiration, EMG) across tasks ranging from unstructured rest to structured cognitive paradigms. Experience sampling probes internal cognition. Pharmacological manipulation of arousal (Aim 2b).</p></div>
+        <div class="proj-pi">
+          <div class="proj-avatar">MM</div>
+          <div><div class="proj-name">Michael Milham, PhD, MD</div><div class="proj-org">Child Mind Institute / NKI</div></div>
+        </div>
+      </div>
+
+      <!-- P2 -->
+      <div class="project-card fade-in">
+        <div class="project-num">Project 2 · UC Berkeley</div>
+        <h3>Meso-Microscale Physiology via Intracranial EEG</h3>
+        <div class="pub-only"><p style="font-size:.88rem;color:var(--text-dim);line-height:1.7;">Some epilepsy patients already have electrodes placed directly on their brain as part of their medical care. With their consent, we record during three types of sessions — structured tasks, movie watching, and multi-day free experience — to see how slow rhythms govern shifts between internal and external thought.</p></div>
+        <div class="sci-only"><p style="font-size:.85rem;color:var(--text-dim);line-height:1.7;">iEEG in surgical epilepsy patients. Three conditions of increasing naturalism: structured attention-switching tasks, passive movie viewing (EOMs/pupillometry/alpha as SBNF indices), and multi-day continuous experience sampling. Focus on DMN–FPCN interactions; BHA and SUA as cortical activation indices.</p></div>
+        <div class="proj-pi">
+          <div class="proj-avatar">RK</div>
+          <div><div class="proj-name">Robert Knight, PhD</div><div class="proj-org">UC Berkeley / Feinstein Institutes</div></div>
+        </div>
+      </div>
+
+      <!-- P3 -->
+      <div class="project-card fade-in">
+        <div class="project-num">Project 3 · Nathan Kline Institute</div>
+        <h3>Multiscale Physiology &amp; Causal Mechanisms</h3>
+        <div class="pub-only"><p style="font-size:.88rem;color:var(--text-dim);line-height:1.7;">Using macaque monkeys — whose brain organization closely mirrors ours — we record from individual brain cells using tiny electrode arrays, then use targeted drugs and electrical stimulation to test which brain circuits actually cause the slow rhythms we observe in humans.</p></div>
+        <div class="sci-only"><p style="font-size:.85rem;color:var(--text-dim);line-height:1.7;">NHP laminar multielectrode + brush array recordings across thalamocortical and AIC systems. Simultaneous scalp EEG/fMRI. Causal manipulation: methylphenidate pharmacology, vagus nerve stimulation, and reversible chemogenetic (DREADD) inactivation of AIC→ACC/NB pathways (Aim 2).</p></div>
+        <div class="proj-pi">
+          <div class="proj-avatar">CS</div>
+          <div><div class="proj-name">Charles Schroeder, PhD</div><div class="proj-org">Nathan Kline Institute</div></div>
+        </div>
+      </div>
+
+      <!-- P4 -->
+      <div class="project-card fade-in">
+        <div class="project-num">Project 4 · Brown University</div>
+        <h3>Integrated Network &amp; Cell-Circuit Modeling</h3>
+        <div class="pub-only"><p style="font-size:.88rem;color:var(--text-dim);line-height:1.7;">We build detailed computer simulations of brain circuits — virtual brains that generate the same rhythms as real ones. By tweaking the model, we can test theories about what causes slow rhythms without ever needing an electrode. The models also make predictions that guide new experiments.</p></div>
+        <div class="sci-only"><p style="font-size:.85rem;color:var(--text-dim);line-height:1.7;">Two-level modeling: (1) dynamical systems/large-scale network models fit to EEG/fMRI/s-EEG capturing bistability and CAP states; (2) biophysically detailed neocortical microcircuit models (laminar resolution) bridging to NHP LFP/CSD. Hybrid multi-scale model integrating both levels (Aim 3).</p></div>
+        <div class="proj-pi">
+          <div class="proj-avatar">SJ</div>
+          <div><div class="proj-name">Stephanie Jones, PhD</div><div class="proj-org">Brown University / Yale</div></div>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="research.html" class="btn btn-primary">View All Projects &amp; Cores →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ (public) / Key Papers teaser (scientist) ═══ -->
+<section class="section-sm" style="background:var(--navy-mid);border-top:1px solid rgba(26,200,174,.08);">
+  <div class="container">
+
+    <!-- PUBLIC: FAQ -->
+    <div class="pub-only">
+      <div class="section-header center fade-in">
+        <div class="tag">Quick Answers</div>
+        <div class="divider divider-center"></div>
+        <h2>Common questions</h2>
+      </div>
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="faq-item fade-in">
+          <button class="faq-question">Is mind-wandering bad for you? <span class="faq-arrow">▾</span></button>
+          <div class="faq-answer">Not at all — in fact, it may be essential. Research shows mind-wandering supports long-term planning, creativity, emotional processing, and memory consolidation. The problem arises when the brain gets stuck in one mode. A healthy brain flexibly shifts between focused attention and internal thought.</div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">What exactly is a "slow brain rhythm"? <span class="faq-arrow">▾</span></button>
+          <div class="faq-answer">Your brain generates electrical signals constantly. Slow brain rhythms are waves that cycle over seconds or even minutes — far slower than the well-known alpha or gamma waves. They're like the ocean tide rather than surface ripples. Our research focuses on these very slow waves and how they organize all faster brain activity like a conductor.</div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">How does this relate to ADHD or depression? <span class="faq-arrow">▾</span></button>
+          <div class="faq-answer">In many neuropsychiatric conditions, the brain's ability to smoothly transition between focused and wandering states appears disrupted. In ADHD, slow rhythms may fail to properly suppress the default mode network during tasks. In depression, the brain may be stuck in ruminative inward focus. By understanding the rhythms that regulate these transitions, we hope to find new treatment targets.</div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">Can I participate in your research? <span class="faq-arrow">▾</span></button>
+          <div class="faq-answer">Yes! We recruit healthy adult volunteers at the Nathan Kline Institute in Orangeburg, NY. Studies involve brain scans (MRI), EEG, and questionnaires. Participation is voluntary, confidential, and compensated. Contact us at the link below.</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:28px;" class="fade-in">
+        <a href="publications.html#participate" class="btn btn-pub">Volunteer for a Study →</a>
+      </div>
+    </div>
+
+    <!-- SCIENTIST: Center aims summary -->
+    <div class="sci-only">
+      <div class="section-header center fade-in">
+        <div class="tag">Center Aims</div>
+        <div class="divider divider-center"></div>
+        <h2>Three center-wide specific aims</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+        <div class="card fade-in">
+          <div style="font-size:.68rem;font-weight:800;color:var(--sci-accent);letter-spacing:.1em;margin-bottom:8px;">AIM 1</div>
+          <h3 style="font-size:.95rem;">Define cognitive, behavioral &amp; autonomic correlates of macroscale SBNFs in humans</h3>
+          <p>Simultaneous fMRI/EEG with multimodal autonomic recording across tasks; pharmacological manipulation of network fluctuations (Project 1).</p>
+        </div>
+        <div class="card fade-in">
+          <div style="font-size:.68rem;font-weight:800;color:var(--sci-accent);letter-spacing:.1em;margin-bottom:8px;">AIM 2</div>
+          <h3 style="font-size:.95rem;">Inform physiological interpretation via meso- and microscale measures</h3>
+          <p>iEEG in humans (Project 2) + NHP laminar recordings + causal neuromodulation (Project 3) bridge macroscale fMRI findings to cellular mechanisms.</p>
+        </div>
+        <div class="card fade-in">
+          <div style="font-size:.68rem;font-weight:800;color:var(--sci-accent);letter-spacing:.1em;margin-bottom:8px;">AIM 3</div>
+          <h3 style="font-size:.95rem;">Develop iterative modeling–empirical interactions to bridge data scales</h3>
+          <p>Network and cell-circuit models updated iteratively with empirical data from Projects 1–3; hybrid multi-scale model integrates both (Project 4).</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ INSTITUTIONS ═══ -->
+<section class="section-sm">
+  <div class="container">
+    <div class="section-header center fade-in">
+      <div class="tag">Collaborating Institutions</div>
+      <div class="divider divider-center"></div>
+      <h2>15 institutions, one center</h2>
+    </div>
+    <div class="inst-grid">
+      <div class="inst-chip">Nathan Kline Institute</div>
+      <div class="inst-chip">Child Mind Institute</div>
+      <div class="inst-chip">UC Berkeley</div>
+      <div class="inst-chip">Brown University</div>
+      <div class="inst-chip">Feinstein Institutes</div>
+      <div class="inst-chip">Icahn School of Medicine</div>
+      <div class="inst-chip">Johns Hopkins University</div>
+      <div class="inst-chip">Columbia University</div>
+      <div class="inst-chip">Vanderbilt University</div>
+      <div class="inst-chip">Yale University</div>
+      <div class="inst-chip">UC Davis</div>
+      <div class="inst-chip">University of Pittsburgh</div>
+      <div class="inst-chip">CUNY</div>
+      <div class="inst-chip">University of Iowa</div>
+      <div class="inst-chip">Research Foundation for Mental Hygiene</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:0;"><div class="nav-logo-icon">🧠</div><div>Conte Center <span style="color:var(--teal)">NKI</span></div></div>
+        <p>Investigating the neurobiology and cognitive role of Slow Brain Network Fluctuations. Funded by the National Institutes of Health.</p>
+        <div class="nih-badge">NIH · P50 MH109429 &nbsp;·&nbsp; 2023–2028</div>
+      </div>
+      <div class="footer-col"><h4>Navigate</h4><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="publications.html">Publications</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Resources</h4><ul>
+        <li><a href="publications.html#data">Open Data</a></li>
+        <li><a href="publications.html#participate">Participate</a></li>
+        <li><a href="publications.html#news">News</a></li>
+        <li><a href="https://www.nimh.nih.gov" target="_blank" rel="noopener">NIH / NIMH</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:charles.schroeder@nki.rfmh.org">Charles Schroeder</a></li>
+        <li><a href="mailto:Alexandre.Franco@nki.rfmh.org">Alexandre Franco</a></li>
+        <li><a href="https://www.nki.rfmh.org" target="_blank" rel="noopener">Nathan Kline Institute</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Conte Center · Nathan Kline Institute</span>
+      <a href="mailto:charles.schroeder@nki.rfmh.org">Contact Us</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
