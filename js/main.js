@@ -19,9 +19,9 @@ function setMode(m)  {
   const banner = document.getElementById('modeBanner');
   if (banner) {
     if (m === 'public') {
-      banner.innerHTML = '<span>👤</span> Viewing in <strong>General Public</strong> mode &nbsp;·&nbsp; <button onclick="setMode(\'scientist\')" style="background:none;border:none;color:inherit;cursor:pointer;text-decoration:underline;font-family:inherit;font-size:inherit;">Switch to Scientist mode</button>';
+      banner.innerHTML = '<span>👤</span> Viewing in <strong>For the Community</strong> mode &nbsp;·&nbsp; <button onclick="setMode(\'scientist\')" style="background:none;border:none;color:inherit;cursor:pointer;text-decoration:underline;font-family:inherit;font-size:inherit;">Switch to For Researchers mode</button>';
     } else {
-      banner.innerHTML = '<span>🔬</span> Viewing in <strong>Scientist</strong> mode &nbsp;·&nbsp; <button onclick="setMode(\'public\')" style="background:none;border:none;color:inherit;cursor:pointer;text-decoration:underline;font-family:inherit;font-size:inherit;">Switch to Public mode</button>';
+      banner.innerHTML = '<span>🔬</span> Viewing in <strong>For Researchers</strong> mode &nbsp;·&nbsp; <button onclick="setMode(\'public\')" style="background:none;border:none;color:inherit;cursor:pointer;text-decoration:underline;font-family:inherit;font-size:inherit;">Switch to For the Community mode</button>';
     }
   }
 }

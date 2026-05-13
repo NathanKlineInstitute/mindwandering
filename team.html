@@ -29,8 +29,8 @@
       <li><a href="team.html">Team</a></li><li><a href="publications.html">Publications</a></li>
     </ul>
     <div class="audience-toggle">
-      <button class="toggle-btn pub" data-mode="public">👤 General Public</button>
-      <button class="toggle-btn sci" data-mode="scientist">🔬 Scientist</button>
+      <button class="toggle-btn pub" data-mode="public">👤 For the Community</button>
+      <button class="toggle-btn sci" data-mode="scientist">🔬 For Researchers</button>
     </div>
     <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
   </div>
@@ -168,6 +168,73 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ── Additional Team Members ── -->
+<section class="section" style="border-top:1px solid rgba(26,200,174,.08);" id="team-members">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="tag">Center Members</div><div class="divider"></div>
+      <div class="pub-only"><h2>Researchers, trainees &amp; staff</h2><p style="color:var(--text-dim);">The postdoctoral fellows, graduate students, research scientists, and staff who power the day-to-day work of the Conte Center.</p></div>
+      <div class="sci-only"><h2>Postdoctoral fellows, graduate students &amp; research staff</h2><p style="color:var(--text-dim);">Center members across all projects and sites. Contact each PI directly for current trainee recruitment.</p></div>
+    </div>
+
+    <!-- ── PLACEHOLDER GRID ── -->
+    <!-- To add a team member: copy one of the member-card blocks below,
+         fill in the name/role/institution/bio, save the photo as
+         images/team/firstname-lastname.jpg, and update the src attribute. -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;" id="memberGrid">
+
+      <!-- PLACEHOLDER CARD — duplicate and fill in for each new member -->
+      <div class="team-card fade-in member-card" style="opacity:.55;border-style:dashed;">
+        <div class="team-avatar" style="background:rgba(26,200,174,.15);border-color:rgba(26,200,174,.25);">
+          <!-- Replace the emoji with: <img src="images/team/firstname-lastname.jpg" alt="Name" onerror="this.style.display='none';this.parentElement.innerHTML='??';"> -->
+          <span style="font-size:1.6rem;">➕</span>
+        </div>
+        <h3 style="color:var(--text-dim);">Your Name Here</h3>
+        <div class="team-role" style="color:var(--text-dim);">Role / Title</div>
+        <div class="team-org">Institution</div>
+        <div class="team-bio" style="font-size:.8rem;color:rgba(138,168,200,.6);">Brief bio or research focus. Edit team.html to add your information here.</div>
+      </div>
+
+      <!-- PLACEHOLDER CARD 2 -->
+      <div class="team-card fade-in member-card" style="opacity:.55;border-style:dashed;">
+        <div class="team-avatar" style="background:rgba(26,200,174,.15);border-color:rgba(26,200,174,.25);">
+          <span style="font-size:1.6rem;">➕</span>
+        </div>
+        <h3 style="color:var(--text-dim);">Your Name Here</h3>
+        <div class="team-role" style="color:var(--text-dim);">Role / Title</div>
+        <div class="team-org">Institution</div>
+        <div class="team-bio" style="font-size:.8rem;color:rgba(138,168,200,.6);">Brief bio or research focus. Edit team.html to add your information here.</div>
+      </div>
+
+      <!-- PLACEHOLDER CARD 3 -->
+      <div class="team-card fade-in member-card" style="opacity:.55;border-style:dashed;">
+        <div class="team-avatar" style="background:rgba(26,200,174,.15);border-color:rgba(26,200,174,.25);">
+          <span style="font-size:1.6rem;">➕</span>
+        </div>
+        <h3 style="color:var(--text-dim);">Your Name Here</h3>
+        <div class="team-role" style="color:var(--text-dim);">Role / Title</div>
+        <div class="team-org">Institution</div>
+        <div class="team-bio" style="font-size:.8rem;color:rgba(138,168,200,.6);">Brief bio or research focus. Edit team.html to add your information here.</div>
+      </div>
+
+    </div><!-- end #memberGrid -->
+
+    <!-- Instructions box — only visible when editing locally, remove once members are added -->
+    <div style="margin-top:28px;background:rgba(255,201,71,.05);border:1px dashed rgba(255,201,71,.3);border-radius:12px;padding:20px 24px;font-size:.85rem;color:var(--text-dim);" class="fade-in">
+      <strong style="color:var(--amber);">📝 How to add a team member:</strong>
+      <ol style="margin-top:10px;padding-left:20px;display:flex;flex-direction:column;gap:6px;">
+        <li>Open <code style="background:rgba(255,255,255,.07);padding:1px 6px;border-radius:3px;">team.html</code> in a text editor</li>
+        <li>Find the <code style="background:rgba(255,255,255,.07);padding:1px 6px;border-radius:3px;"><!-- PLACEHOLDER CARD --></code> comment and copy one card block</li>
+        <li>Replace "Your Name Here", role, institution, and bio text</li>
+        <li>Save their photo as <code style="background:rgba(255,255,255,.07);padding:1px 6px;border-radius:3px;">images/team/firstname-lastname.jpg</code> and update the <code style="background:rgba(255,255,255,.07);padding:1px 6px;border-radius:3px;">src</code> attribute</li>
+        <li>Remove the <code style="background:rgba(255,255,255,.07);padding:1px 6px;border-radius:3px;">style="opacity:.55;border-style:dashed;"</code> from the card once it's filled in</li>
+        <li>Delete placeholder cards you no longer need, and remove this instructions box when done</li>
+      </ol>
+    </div>
+
   </div>
 </section>
 
